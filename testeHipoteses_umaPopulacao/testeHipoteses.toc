@@ -7,8 +7,8 @@
 \beamer@subsectionintoc {3}{1}{Poder e tamanho do teste.}{26}{0}{3}
 \beamer@sectionintoc {4}{Teste para $\mu $ quando $N(\mu , \sigma ^2)$ com $\sigma ^2$ desconhecida (Teste t).}{44}{0}{4}
 \beamer@subsectionintoc {4}{1}{Poder e tamanho da amostra.}{56}{0}{4}
-\beamer@sectionintoc {5}{Teste para $\sigma $ para $N(\mu , \sigma ^2)$.}{80}{0}{5}
-\beamer@subsectionintoc {5}{1}{Poder e tamanho da amostra.}{93}{0}{5}
-\beamer@sectionintoc {6}{Teste para propor\IeC {\c c}\IeC {\~a}o: $p$ ($n \geq 40$).}{114}{0}{6}
-\beamer@subsectionintoc {6}{1}{Poder e tamanho da amostra.}{127}{0}{6}
-\beamer@sectionintoc {7}{Roteiro para testes de hip\IeC {\'o}teses: uma vari\IeC {\'a}vel ou popula\IeC {\c c}\IeC {\~a}o.}{146}{0}{7}
+\beamer@sectionintoc {5}{Teste para $\sigma $ para $N(\mu , \sigma ^2)$.}{74}{0}{5}
+\beamer@subsectionintoc {5}{1}{Poder e tamanho da amostra.}{87}{0}{5}
+\beamer@sectionintoc {6}{Teste para propor\IeC {\c c}\IeC {\~a}o: $p$ ($n \geq 40$).}{105}{0}{6}
+\beamer@subsectionintoc {6}{1}{Poder e tamanho da amostra.}{118}{0}{6}
+\beamer@sectionintoc {7}{Roteiro para testes de hip\IeC {\'o}teses: uma vari\IeC {\'a}vel ou popula\IeC {\c c}\IeC {\~a}o.}{137}{0}{7}

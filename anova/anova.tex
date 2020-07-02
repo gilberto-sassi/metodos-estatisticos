@@ -56,11 +56,41 @@
 \definecolor{important}{RGB}{0,153,0}
 
 
+\usepackage{listings}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\renewcommand{\lstlistingname}{Código}% Listing -> Código
+\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s}% List of Listings -> List of Código
+
+
+
 %código para alinhar a esquerda os itens no description
 \defbeamertemplate{description item}{align left}{\insertdescriptionitem\hfill}
 \defbeamertemplate{enumerate item}{align left}{\insertdescriptionitem\hfill}
-
-
 
 %AMS packages
 \usepackage{amsmath}
@@ -536,11 +566,11 @@ $$1-\beta = 1 - P\left( F_{a-1, n\cdot a-a}\left(n\cdot f^2\right) \leq f_{1-\al
 			\toprule[0.05cm]
 			Algodão & Médias populacionais \\ 
 			\midrule[0.025cm]
-			15 & 10 \\ 
-			20 & 15 \\ 
-			25 & 18 \\ 
-			30 & 22 \\ 
-			35 & 10 \\ 
+			15 & 15 \\ 
+			20 & 20 \\ 
+			25 & 25 \\ 
+			30 & 30 \\ 
+			35 & 25 \\ 
 			\bottomrule[0.05cm]
 		\end{tabular}
 		}
@@ -551,7 +581,7 @@ $$1-\beta = 1 - P\left( F_{a-1, n\cdot a-a}\left(n\cdot f^2\right) \leq f_{1-\al
 
 \end{frame}
 
-\begin{frame}{Tamanho da amostra (estudos balanceados).}
+\begin{frame}[fragile]{Tamanho da amostra (estudos balanceados).}
 
 \small
 \begin{block}{Solução}
@@ -574,11 +604,15 @@ $$1-\beta = 1 - P\left( F_{a-1, n\cdot a-a}\left(n\cdot f^2\right) \leq f_{1-\al
 
 	O poder do teste é dado por
 	\begin{align*}
-	1-\beta &=1 - P\left( F_{a-1, N-a}\left(\Phi^2\right) \leq  f_{0,95;4, 25} \right)\\
-	&= 1 - P\left( F_{4, 25}\left(33,33\right)  \leq 2,7587 \right)\\
-	&= 0,9943.
+	1-\beta &=1 - P\left( F_{a-1, N-a}\left(\Phi^2\right) \leq  f_{0,95;4, 25} \right) = 1 - P\left( F_{4, 25}\left(33,33\right)  \leq 2,7587 \right) = 0,9943.
 	\end{align*}
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_anova_balanced(group_means  = c(15, 20, 25, 30, 35), mean = 15,
+		sigma = sqrt(27),  pwr = NULL, n = 6, sig_level = 0.05)
+\end{lstlisting}
+
 \normalsize
 
 \end{frame}
@@ -594,11 +628,11 @@ $$1-\beta = 1 - P\left( F_{a-1, n\cdot a-a}\left(n\cdot f^2\right) \leq f_{1-\al
 				\toprule[0.05cm]
 				Algodão & Médias populacionais \\ 
 				\midrule[0.025cm]
-				15 & 10 \\ 
-				20 & 15 \\ 
-				25 & 18 \\ 
-				30 & 22 \\ 
-				35 & 10 \\ 
+				15 & 15 \\ 
+				20 & 20 \\ 
+				25 & 25 \\ 
+				30 & 30 \\ 
+				35 & 35 \\ 
 				\bottomrule[0.05cm]
 			\end{tabular}
 		}
@@ -609,8 +643,9 @@ $$1-\beta = 1 - P\left( F_{a-1, n\cdot a-a}\left(n\cdot f^2\right) \leq f_{1-\al
 
 \end{frame}
 
-\begin{frame}{Tamanho da amostra (estudos balanceados).}
+\begin{frame}[fragile]{Tamanho da amostra (estudos balanceados).}
 
+\small
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as hipóteses: $H_0: \tau_1 = \cdots = \tau_5 = 0$ e $H_1: \tau_1^2 + \cdots + \tau_5^2 > 0$;
 
@@ -633,18 +668,13 @@ $$1-\beta = 1 - P\left( F_{a-1, n\cdot a-a}\left(n\cdot f^2\right) \leq f_{1-\al
 	Então, precisamos de $n=5$ observações para cada nível de porcentagem de fibra de tecido.
 \end{block}
 
-\end{frame}
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_anova_balanced(group_means  = c(15, 20, 25, 30, 35), mean = 15, sigma = sqrt(27),
+		pwr = 0.99, n = NULL, sig_level = 0.05)
+\end{lstlisting}
 
-\begin{frame}
-\begin{block}{Solução (\texttt{R})}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{figure/samp_size_anova.png}
-		\caption{Tamanho da amostra.}
-	\end{figure}
-\end{block}
+\normalsize
 \end{frame}
-
 
 \subsection{Intervalo de confiança para médias}
 
@@ -723,8 +753,8 @@ IC(\mu_i, \gamma) = \left( t_{\frac{\alpha}{2};N - a} \sqrt{\frac{QM_E}{n}} + \b
 	
 	Então a média para cada nível de porcentagem de fibra de algodão é dado:
 	\begin{align*}
-	IC(\mu_1, \gamma) &= \left( \bar{y}_{1\cdot} + t_{\frac{\alpha}{2};N - a} \sqrt{\frac{QM_E}{n}};  \bar{y}_{1\cdot} + t_{1-\frac{\alpha}{2};N - a} \sqrt{\frac{QM_E}{n}}  \right)\\
-	&= \left( 9,80 - 2,086 \sqrt{\frac{8,06}{5}}; 9,80 + 2,086 \sqrt{\frac{8,06}{5}} \right) = \left( 7,15; 12,45 \right).
+	IC(\mu_1, \gamma) &= \left( \bar{y}_{1\cdot} + t_{\frac{\alpha}{2};N - a} \sqrt{\frac{QM_E}{n}};  \bar{y}_{1\cdot} + t_{1-\frac{\alpha}{2};N - a} \sqrt{\frac{QM_E}{n}}  \right) = \left( 9,80 - 2,086 \sqrt{\frac{8,06}{5}}; 9,80 + 2,086 \sqrt{\frac{8,06}{5}} \right)\\
+	&= \left( 7,15; 12,45 \right).
 	\end{align*}
 	Então, a resistência média à tração para fibras com $15\%$ de fibra de algodão está entre $7,15$ e $12,45$.
 \end{block}

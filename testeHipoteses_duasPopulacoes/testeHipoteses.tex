@@ -35,6 +35,37 @@
 \usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
 \AtBeginEnvironment{figure}{\setcounter{subfigure}{0}}% Resets subfigure counter at start of figure environment
 
+
+\usepackage{listings}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\renewcommand{\lstlistingname}{Código}% Listing -> Código
+\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s}% List of Listings -> List of Código
+
 % my own color
 \definecolor{important}{RGB}{0,153,0}
 
@@ -489,7 +520,7 @@ Então, o tamanho \sout{mínimo} da amostra é dado por
 	
 	\textbf{Passo 2)} Nível de significância $\alpha=5\%$;
 	
-	Note que $\mu_1=650ml$, $\mu_2=700ml$, $\Delta=\mu_1-\mu_2=650-700=-10ml$, $\Delta_0=0$, $\sigma_1=5cm^3$, $\sigma_2^2 = 10cm^3$, $n_1=n_2=10$, $\alpha = 5\%$ e $1-\beta=99\%$. 
+	Note que $\mu_1=690ml$, $\mu_2=700ml$, $\Delta=\mu_1-\mu_2=690-700=-10ml$, $\Delta_0=0$, $\sigma_1=5cm^3$, $\sigma_2 = 10cm^3$, $\alpha = 5\%$ e $1-\beta=95\%$. 
 	
 	Primeiro calculamos os quantis da distribuição normal padrão:
 	\begin{itemize}
@@ -500,7 +531,7 @@ Então, o tamanho \sout{mínimo} da amostra é dado por
 	Então, o tamanho \sout{mínimo} da amostra de cada população é dado por
 	\begin{align*}
 	n_1=n_2&=n=\left\lceil \left( \frac{z_{1-\beta} + z_{1-\frac{\alpha}{2}}}{ \Delta - \Delta_0 } \right)^2 (\sigma_1^2 + \sigma_2^2) \right\rceil\\
-	&= \left\lceil \left( \frac{1,65 + 1,96}{10} \right)^2 (5^2 + 10^2)  \right\rceil = 17.
+	&= \left\lceil \left( \frac{1,65 + 1,96}{50} \right)^2 (5^2 + 10^2)  \right\rceil = 17.
 	\end{align*}
 \end{block}
 
@@ -607,7 +638,7 @@ n_1 = n_2 = n = \left\lceil \left( \frac{z_{1-\beta} + z_{1-\alpha}}{\Delta - \D
 	
 	\textbf{Passo 2)} Nível de significância $\alpha=5\%$;
 	
-	Note que $\mu_1=50$, $\mu_2=40$, $\Delta=10$, $\Delta_0=0$, $\sigma=8$, $\sigma_2=9$, $n_1=10$, $n_2=20$, $1-\beta=0,99$ e $\alpha=0,05$. 
+	Note que $\mu_1=50$, $\mu_2=40$, $\Delta=10$, $\Delta_0=0$, $\sigma=8$, $\sigma_2=9$, $1-\beta=0,99$ e $\alpha=0,05$. 
 	
 	Primeiro vamos achar os quantis:
 	\begin{itemize}
@@ -701,12 +732,12 @@ Imagine que temos duas populações com distribuições normais com variâncias 
 		
 		Primeiro vamos encontrar os quantis da distribuição normal padrão:
 		\begin{itemize}
-			\item $\Phi\left(z_\alpha\right) = \Phi\left(z_{0,05}\right) = \alpha = 0,05$, então $z_{0,05} = -1,96$.
+			\item $\Phi\left(z_\alpha\right) = \Phi\left(z_{0,05}\right) = \alpha = 0,05$, então $z_{0,05} = -1,65$.
 		\end{itemize}
 		\vfill
 		
 		Com as informações da Tabela~\ref{tab:comparacao-medias-power}, temos que 
-		$$1-\beta=\Phi\left( z_\alpha - \frac{\Delta - \Delta_0}{\sqrt{ \frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2} }} \right)=\Phi\left( -1,96 - \frac{-10 - 0}{\sqrt{ \frac{10^2}{10} + \frac{5^2}{15} }} \right)=0,8334.$$
+		$$1-\beta=\Phi\left( z_\alpha - \frac{\Delta - \Delta_0}{\sqrt{ \frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2} }} \right)=\Phi\left( -1,65 - \frac{-10 - 0}{\sqrt{ \frac{10^2}{10} + \frac{5^2}{15} }} \right)=0,8993.$$
 	\end{block}
 \end{frame}
 
@@ -1136,7 +1167,8 @@ em que $\lambda = \frac{\sigma_1}{\sigma_2} \in (0, \infty)- \{1\}$. Alguns livr
 
 \end{frame}
 
-\begin{frame}{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} = 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} \neq 1$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} = 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} \neq 1$.}
+\small
 
 Imagine que
 \begin{itemize}
@@ -1149,7 +1181,19 @@ Imagine que
 
 
 Imagine que conhecemos $\sigma_1$, $\sigma_2$, $\lambda = \frac{\sigma_1}{\sigma_2}$, $\alpha$, $1-\beta$ e suponha que $n=n_1=n_2$, então o tamanho \sout{mínimo} das amostras das variáveis é solução da equação
-$$1-\beta=1 - P \left(F_{n-1, n-1} \leq f_{1-\frac{\alpha}{2};n-1, n-1} \frac{1}{\lambda^2} \right) + P \left(F_{n-1, n-1} \leq f_{\frac{\alpha}{2};n-1, n-1} \frac{1}{\lambda^2} \right).$$
+\scriptsize
+\begin{align}\label{eq:pwr-f-test-bilateral}
+1-\beta=1 - P \left(F_{n-1, n-1} \leq f_{1-\frac{\alpha}{2};n-1, n-1} \frac{1}{\lambda^2} \right) + P \left(F_{n-1, n-1} \leq f_{\frac{\alpha}{2};n-1, n-1} \frac{1}{\lambda^2} \right).
+\end{align}
+
+
+A equação~\eqref{eq:pwr-f-test-bilateral} é resolvida usando métodos numéricos que estão implementados em diversos \textit{softwares}.
+\begin{description}
+	\item[No R] \lstinline|pwr_sigma_2pop|
+\end{description}
+Esta função está no pacote \lstinline|power|, que pode ser instalado usando o pacote \lstinline|devtools|: \lstinline|devtools::install_github("gilberto-sassi/power")|.
+
+\normalsize
 \end{frame}
 
 \begin{frame}{Poder do teste: $H_0:\frac{\sigma_1^2}{\sigma_2^2} = 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} \neq 1$.}
@@ -1164,9 +1208,9 @@ $$1-\beta=1 - P \left(F_{n-1, n-1} \leq f_{1-\frac{\alpha}{2};n-1, n-1} \frac{1}
 \normalsize
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0:\frac{\sigma_1^2}{\sigma_2^2} = 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} \neq 1$.}
+\begin{frame}[fragile]{Poder do teste: $H_0:\frac{\sigma_1^2}{\sigma_2^2} = 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} \neq 1$.}
 
-\footnotesize
+\tiny
 
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as hipóteses: $H_0: \frac{\sigma_1}{\sigma_2} = 1$ e $H_1: \frac{\sigma_1}{\sigma_2}$;
@@ -1185,10 +1229,15 @@ $$1-\beta=1 - P \left(F_{n-1, n-1} \leq f_{1-\frac{\alpha}{2};n-1, n-1} \frac{1}
 	Então o poder do teste é dado por
 	\begin{align*}
 		1-\beta &= 1 - P\left( F_{n_1-1, n_2-1} \leq f_{1-\frac{\alpha}{2};n_1-1, n_2-1} \frac{1}{\lambda^2} \right) + P\left( F_{n_1-1, n_2-1} \leq f_{\frac{\alpha}{2};n_1-1, n_2-1} \frac{1}{\lambda^2} \right)\\
-		&=1 - P\left( F_{24, 20} \leq f_{0,975;24, 20} \frac{1}{\lambda^2} \right) + P\left( F_{24, 20} \leq f_{0,025;24, 20} \frac{1}{\lambda^2} \right)\\
+%		&=1 - P\left( F_{24, 20} \leq f_{0,975;24, 20} \frac{1}{\lambda^2} \right) + P\left( F_{24, 20} \leq f_{0,025;24, 20} \frac{1}{\lambda^2} \right)\\
 		&= 1 - P\left( F_{24, 20} \leq \frac{2,408 \cdot 25^2}{15^2} \right) + P\left( F_{24, 20} \leq \frac{0,4297 \cdot 25^2}{15^2} \right) = 0,6533.
 	\end{align*}
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_sigma_2pop(sigma1 = 15, sigma2 = 25, n1 = 25, n2 = 21, pwr = NULL,
+		alternative = "two.sided", sig_level = 0.05)
+\end{lstlisting}
 
 \normalsize
 \end{frame}
@@ -1207,7 +1256,7 @@ $$1-\beta=1 - P \left(F_{n-1, n-1} \leq f_{1-\frac{\alpha}{2};n-1, n-1} \frac{1}
 \end{frame}
 
 
-\begin{frame}{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} = 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} \neq 1$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} = 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} \neq 1$.}
 
 \small
 
@@ -1227,22 +1276,13 @@ $$1-\beta=1 - P \left(F_{n-1, n-1} \leq f_{1-\frac{\alpha}{2};n-1, n-1} \frac{1}
 
 Então, precisamos estudar 73 homens e 73 mulheres.
 
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_sigma_2pop(sigma1 = 15, sigma2 = 25, n1 = NULL, n2 = NULL,
+				pwr = 0.99, alternative = "two.sided", sig_level = 0.05)
+\end{lstlisting}
+
 \normalsize
 
-\end{frame}
-
-\begin{frame}{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} = 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} \neq 1$.}
-
-\normalsize
-
-\begin{block}{Solução}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=\linewidth]{figures/samp-size-test-var-bilateral}
-		\caption{Cálculo do tamanho da amostra no \texttt{R}.}
-	\end{figure}
-
-\end{block}
 \end{frame}
 
 \begin{frame}{Poder do teste: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \leq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} > 1$.}
@@ -1275,6 +1315,8 @@ Alguns livros chamada a Função Poder de \textcolor{important}{Curva de Caracte
 
 \begin{frame}{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \leq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} > 1$.}
 
+\small
+
 Imagine que
 \begin{itemize}
 \item Hipóteses: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \leq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} > 1$;
@@ -1286,7 +1328,17 @@ Imagine que
 
 
 Imagine que conhecemos $\sigma_1$, $\sigma_2$, $\lambda = \frac{\sigma_1}{\sigma_2}$, $\alpha$, $1-\beta$ e suponha que $n=n_1=n_2$, então o tamanho \sout{mínimo} das amostras das variáveis é solução da equação
-$$1-\beta=1 - P \left(F_{n-1, n-1} \leq f_{1-\alpha; n-1, n-1} \frac{1}{\lambda^2} \right) = 1 - P \left(F_{n-1, n-1} \leq f_{1-\alpha; n-1, n-1} \frac{\sigma_2^2}{\sigma_1^2} \right).$$
+\begin{align}\label{eq:pwr-f-test-greater}
+1-\beta=1 - P \left(F_{n-1, n-1} \leq f_{1-\alpha; n-1, n-1} \frac{1}{\lambda^2} \right) = 1 - P \left(F_{n-1, n-1} \leq f_{1-\alpha; n-1, n-1} \frac{\sigma_2^2}{\sigma_1^2} \right).
+\end{align}
+
+A equação~\eqref{eq:pwr-f-test-greater} é resolvida usando métodos numéricos que estão implementados em diversos \textit{softwares}.
+\begin{description}
+	\item[No R] \lstinline|pwr_sigma_2pop|
+\end{description}
+Esta função está no pacote \lstinline|power|, que pode ser instalado usando o pacote \lstinline|devtools|: \lstinline|devtools::install_github("gilberto-sassi/power")|.
+
+\normalsize
 \end{frame}
 
 \begin{frame}{Poder do teste: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \leq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} > 1$.}
@@ -1299,7 +1351,7 @@ $$1-\beta=1 - P \left(F_{n-1, n-1} \leq f_{1-\alpha; n-1, n-1} \frac{1}{\lambda^
 \normalsize
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \leq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} > 1$.}
+\begin{frame}[fragile]{Poder do teste: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \leq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} > 1$.}
 
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as hipóteses: $H_0: \frac{\sigma_1^2}{\sigma_2^2} \leq 1$ e $H_1: \frac{\sigma_1^2}{\sigma_2^2} > 1$;
@@ -1316,9 +1368,15 @@ $$1-\beta=1 - P \left(F_{n-1, n-1} \leq f_{1-\alpha; n-1, n-1} \frac{1}{\lambda^
 	Então o poder do teste é dado por
 	\begin{align*}
 		1-\beta &= 1- P \left( F_{20, 20} \leq f_{0,95; 20, 20} \frac{\sigma_2^2}{\sigma_1^2} \right) = 1- P \left( F_{20, 20} \leq 2,1242 \cdot  \frac{5^2}{10^2} \right)\\
-		&= 0,8482.
+		&= 0,9172 .
 	\end{align*}
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_sigma_2pop(sigma1 = 10, sigma2 = 5, n1 = 21, n2 = 21, pwr = NULL,
+				alternative = "greater", sig_level = 0.05)
+\end{lstlisting}
+
 \end{frame}
 
 \begin{frame}{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \leq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} > 1$.}
@@ -1331,7 +1389,7 @@ $$1-\beta=1 - P \left(F_{n-1, n-1} \leq f_{1-\alpha; n-1, n-1} \frac{1}{\lambda^
 \normalsize
 \end{frame}
 
-\begin{frame}{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \leq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} > 1$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \leq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} > 1$.}
 
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as hipóteses: $H_0: \frac{\sigma_1^2}{\sigma_2^2} \leq 1$ e $H_1: \frac{\sigma_1^2}{\sigma_2^2} > 1$;
@@ -1346,23 +1404,12 @@ $$1-\beta=1 - P \left(F_{n-1, n-1} \leq f_{1-\alpha; n-1, n-1} \frac{1}{\lambda^
 	
 	Então, precisamos analisar o ponto de fusão de $n=n_1=n_2=25$  barras de cada liga.
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_sigma_2pop(sigma1 = 10, sigma2 = 5, n1 = NULL, n2 = NULL, pwr = 0.95,
+		alternative = "greater", sig_level = 0.05)
+\end{lstlisting}
 \end{frame}
-
-\begin{frame}{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \leq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} > 1$.}
-
-\normalsize
-
-\begin{block}{Solução}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=\linewidth]{figures/samp-size-test-var-h1-upper}
-		\caption{Cálculo do tamanho da amostra no \texttt{R}.}
-	\end{figure}
-	
-\end{block}
-\end{frame}
-
-
 
 \begin{frame}{Poder do teste: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \geq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} < 1$.}
 
@@ -1392,7 +1439,9 @@ Alguns livros chamada a Função Poder de \textcolor{important}{Curva de Caracte
 \normalsize
 \end{frame}
 
-\begin{frame}{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \geq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} < 1$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \geq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} < 1$.}
+
+\small
 
 Imagine que
 \begin{itemize}
@@ -1405,7 +1454,17 @@ Imagine que
 
 
 Imagine que conhecemos $\sigma_1$, $\sigma_2$, $\lambda = \frac{\sigma_1}{\sigma_2}$, $\alpha$, $1-\beta$ e suponha que $n=n_1=n_2$, então o tamanho \sout{mínimo} das amostras das variáveis é solução da equação
-$$1-\beta=P \left(F_{n-1, n-1} \leq f_{\alpha; n-1, n-1} \frac{1}{\lambda^2} \right).$$
+\begin{align}\label{eq:pwr-f-test-less}
+1-\beta=P \left(F_{n-1, n-1} \leq f_{\alpha; n-1, n-1} \frac{1}{\lambda^2} \right).
+\end{align}
+
+A equação~\eqref{eq:pwr-f-test-less} é resolvida usando métodos numéricos que estão implementados em diversos \textit{softwares}.
+\begin{description}
+	\item[No R] \lstinline|pwr_sigma_2pop|
+\end{description}
+Esta função está no pacote \lstinline|power|, que pode ser instalado usando o pacote \lstinline|devtools|: \lstinline|devtools::install_github("gilberto-sassi/power")|.
+
+\normalsize
 \end{frame}
 
 \begin{frame}{Poder do teste: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \geq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} < 1$.}
@@ -1427,7 +1486,7 @@ $$1-\beta=P \left(F_{n-1, n-1} \leq f_{\alpha; n-1, n-1} \frac{1}{\lambda^2} \ri
 \end{block}
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \geq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} < 1$.}
+\begin{frame}[fragile]{Poder do teste: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \geq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} < 1$.}
 
 \small
 \begin{block}{Solução}
@@ -1445,10 +1504,15 @@ $$1-\beta=P \left(F_{n-1, n-1} \leq f_{\alpha; n-1, n-1} \frac{1}{\lambda^2} \ri
 
 	Então o poder do teste é dado por
 	\begin{align*}
-		1-\beta &= P\left(F_{n_1-1, n_2-1} \leq f_{\alpha;n_1-1, n_2-1}  \frac{1}{\lambda^2}\right)\\
-		 &= P\left(F_{25, 20} \leq 0,4981  \frac{1}{0,5^2}\right)=0,9402.
+		1-\beta &= P\left(F_{n_1-1, n_2-1} \leq f_{\alpha;n_1-1, n_2-1}  \frac{1}{\lambda^2}\right) = P\left(F_{25, 20} \leq 0,4981  \frac{1}{0,5^2}\right)=0,9402.
 	\end{align*}
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_sigma_2pop(sigma1 = 5, sigma2 = 10, n1 = 26, n2 = 21, pwr = NULL,
+			alternative = "less", sig_level = 0.05)
+\end{lstlisting}
+
 \normalsize
 \end{frame}
 
@@ -1471,7 +1535,7 @@ $$1-\beta=P \left(F_{n-1, n-1} \leq f_{\alpha; n-1, n-1} \frac{1}{\lambda^2} \ri
 \end{block}
 \end{frame}
 
-\begin{frame}{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \geq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} < 1$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \geq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} < 1$.}
 
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as seguintes hipóteses: $H_0: \frac{\sigma_1^2}{\sigma_2^2} \geq 1$ e $H_1: \frac{\sigma_1^2}{\sigma_2^2} < 1$;
@@ -1486,20 +1550,11 @@ $$1-\beta=P \left(F_{n-1, n-1} \leq f_{\alpha; n-1, n-1} \frac{1}{\lambda^2} \ri
 	Então, precisamos coletar $n=36$ observações da população 1 e da população 2.
 \end{block}
 
-\end{frame}
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_sigma_2pop(sigma1 = 5, sigma2 = 10, n1 = NULL, n2 = NULL, pwr = 0.99,
+			alternative = "less", sig_level = 0.05)
+\end{lstlisting}
 
-\begin{frame}{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \geq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} < 1$.}
-
-\normalsize
-
-\begin{block}{Solução}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=\linewidth]{figures/samp-size-test-var-h1-lower}
-		\caption{Cálculo do tamanho da amostra no \texttt{R}.}
-	\end{figure}
-	
-\end{block}
 \end{frame}
 
 \subsection{Intervalo de confiança para diferença de médias: $\nicefrac{\sigma_1^2}{\sigma_2^2}$.}
@@ -1838,9 +1893,9 @@ em que $\Delta = \mu_1 - \mu_2, \Delta \in \mathbb{R} - \{\Delta_0 \}$. Alguns l
 \end{frame}
 
 
-\begin{frame}{Tamanho da amostra: $H_0:\mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$.}
 
-\footnotesize
+\tiny
 
 Imagine que
 \begin{itemize}
@@ -1853,9 +1908,15 @@ Imagine que
 \vfill
 
 Considere $1-\beta$, $\alpha$ $n_1=n_2=n$, então o tamanho \sout{mínimo} da amostra é solução da seguinte equação
-\begin{align*}
+\begin{align} \label{eq:pwr-t-test-2pop-bilateral}
 1-\beta = 1 - P\left( t_{2n-2}\left( \frac{\mu_1 - \mu_2 - \Delta_0}{\sigma \sqrt{\frac{2}{n}}} \right) \leq t_{1-\frac{\alpha}{2};2n-2} \right) + P\left( t_{2n-2}\left( \frac{\mu_1 - \mu_2 - \Delta_0}{\sigma \sqrt{\frac{2}{n}}} \right) \leq t_{\frac{\alpha}{2};2n-2} \right).
-\end{align*}
+\end{align}
+
+A equação~\eqref{eq:pwr-t-test-2pop-bilateral} é resolvida usando métodos numéricos que estão implementados em diversos \textit{softwares}.
+\begin{description}
+	\item[No R] \lstinline|pwr_sigma_2pop|
+\end{description}
+Esta função está no pacote \lstinline|power|, que pode ser instalado usando o pacote \lstinline|devtools|: \lstinline|devtools::install_github("gilberto-sassi/power")|.
 
 \normalsize
 \end{frame}
@@ -1868,9 +1929,9 @@ Considere $1-\beta$, $\alpha$ $n_1=n_2=n$, então o tamanho \sout{mínimo} da am
 
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0:\mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$.}
+\begin{frame}[fragile]{Poder do teste: $H_0:\mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$.}
 
-\small
+\scriptsize
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as hipóteses: $H_0: \mu_1 - \mu_2 = \Delta_0=0$ e $H_1: \mu_1  - \mu_2 \neq \Delta_0=0$;
 	
@@ -1887,10 +1948,15 @@ Considere $1-\beta$, $\alpha$ $n_1=n_2=n$, então o tamanho \sout{mínimo} da am
 	Então, o poder do teste é dado por
 	\begin{align*}
 		1-\beta &= 1 - P\left( t_{n_1+n_2-2}\left(\mu\right) \leq t_{1-\frac{\alpha}{2};n_1+n_2-2} \right) + P\left( t_{n_1+n_2-2}\left(\mu \right) \leq t_{\frac{\alpha}{2};n_1+n_2-2} \right)\\
-		&= 1 - P\left(t_{14}(-0,67) \leq 2,145\right) + P\left(t_{14}(-0,67) \leq -2,145\right)\\
-		&= 0,096.
+		&= 1 - P\left(t_{14}(-0,67) \leq 2,145\right) + P\left(t_{14}(-0,67) \leq -2,145\right) = 0,096.
 	\end{align*}
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_t_test_2pop_homo(sigma = 3, delta= 92 - 93, delta0 = 0, n1 = 8,
+			n2 = 8, pwr = NULL, alternative = "two.sided", sig_level = 0.05)
+\end{lstlisting}
+
 \normalsize
 
 \end{frame}
@@ -1903,9 +1969,9 @@ Considere $1-\beta$, $\alpha$ $n_1=n_2=n$, então o tamanho \sout{mínimo} da am
 
 \end{frame}
 
-\begin{frame}{Tamanho da amostra: $H_0:\mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$.}
 
-\footnotesize
+\small
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as hipóteses: $H_0: \mu_1 - \mu_2 = \Delta_0=0$ e $H_1: \mu_1  - \mu_2 \neq \Delta_0=0$;
 	
@@ -1914,30 +1980,21 @@ Considere $1-\beta$, $\alpha$ $n_1=n_2=n$, então o tamanho \sout{mínimo} da am
 	Como $\sigma=3$, $\alpha = 0,05$, $\mu_1=92$, $\mu=93$, $\Delta_0=0$ e $1-\beta=99\%$. Assuma que $n_1=n_2=n$, então o tamanho \sout{mínimo} da amostra é solução da seguinte equação
 	\scriptsize
 	\begin{align*}
-		1-\beta &= 0,99 =  1 - P\left( t_{2n-2}\left( \frac{\mu_1 - \mu_2 - \Delta_0}{\sigma \sqrt{\frac{2}{n}}} \right) \leq t_{1-\frac{\alpha}{2};2n-2} \right) + P\left( t_{2n-2}\left( \frac{\mu_1 - \mu_2 - \Delta_0}{\sigma \sqrt{\frac{2}{n}}} \right) \leq t_{\frac{\alpha}{2};2n-2} \right)\\
+		1-\beta &= 0,99 =  1 - P\left( t_{2n-2}\left( \frac{\mu_1 - \mu_2 - \Delta_0}{\sigma \sqrt{\frac{2}{n}}} \right) \leq t_{1-\frac{\alpha}{2};2n-2} \right) \\
+		&+ P\left( t_{2n-2}\left( \frac{\mu_1 - \mu_2 - \Delta_0}{\sigma \sqrt{\frac{2}{n}}} \right) \leq t_{\frac{\alpha}{2};2n-2} \right)\\
 		&= 1 - P\left( t_{2n-2}\left( \frac{-1 }{3 \sqrt{\frac{2}{n}}} \right) \leq t_{0,975;2n-2} \right) + P\left( t_{2n-2}\left( \frac{-1}{3 \sqrt{\frac{2}{n}}} \right) \leq t_{0,025;2n-2} \right)
 	\end{align*}
 	\normalsize
 \end{block}
-Então, usando o \texttt{R}, precisamos coletar $n_1=n_2=46$ observações de cada população.
+Então, usando o \texttt{R}, precisamos coletar $n_1=n_2=332$ observações de cada população.
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_t_test_2pop_homo(sigma = 3, delta= 92 - 93, delta0 = 0, n1 = NULL
+			n2 = NULL, pwr = 0.99, alternative = "two.sided", sig_level = 0.05)
+\end{lstlisting}
 \normalsize
 
 \end{frame}
-
-\begin{frame}{Tamanho da amostra: $H_0:\frac{\sigma_1^2}{\sigma_2^2} \geq 1$ e $H_1:\frac{\sigma_1^2}{\sigma_2^2} < 1$.}
-
-\normalsize
-
-\begin{block}{Solução}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=\linewidth]{figures/samp-size-2pop-bilateral-s2-unknown.png}
-		\caption{Cálculo do tamanho da amostra no \texttt{R}.}
-	\end{figure}
-	
-\end{block}
-\end{frame}
-
 
 \subsection{Intervalo de confiança para diferença de médias: $\mu_1 - \mu_2$. (Variâncias iguais e desconhecidas).}
 
@@ -2367,7 +2424,7 @@ Poder do teste é dado
 \textcolor{important}{1-\beta} &=1 - \left[P\left( t_{\frac{\alpha}{2};\nu} \leq T_0 \leq t_{1-\frac{\alpha}{2};\nu} \mid H_1 \right)\right] = 1 - \left[P\left( t_{\frac{\alpha}{2};\nu} \leq T_0 \leq t_{1-\frac{\alpha}{2};\nu} \mid \Delta \neq \Delta_0 \right)\right]\\
 &\approx \textcolor{important}{1 - P\left( t_{n}\left( \frac{\lvert \mu_1 - \mu_2 - \Delta_0 \rvert}{\sqrt{\frac{\sigma_1^2 + \sigma_1^2}{2}} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \right) \leq t_{1-\frac{\alpha}{2};n} \right)+P\left( t_{n}\left( \frac{\lvert \mu_1 - \mu_2 - \Delta_0 \rvert}{\sqrt{\frac{\sigma_1^2 + \sigma_1^2}{2}} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \right) \leq t_{\frac{\alpha}{2};n} \right).}
 \end{align*}
-em que $n = n_1 + n_2 - 1$. A \textcolor{important}{Função Poder}, dado o tamanho da amostra $n$, é uma função das médias populacionais na hipótese alternativa  $\pi: \mathbb{R} - \{\Delta_0\} \longrightarrow [0,1]$ dada por
+em que $n = n_1 + n_2 - 2$. A \textcolor{important}{Função Poder}, dado o tamanho da amostra $n$, é uma função das médias populacionais na hipótese alternativa  $\pi: \mathbb{R} - \{\Delta_0\} \longrightarrow [0,1]$ dada por
 \begin{align*}
 \pi(\delta) = 1 - P\left( t_{n}\left( \frac{\lvert \mu_1 - \mu_2 - \Delta_0 \rvert}{\sqrt{\frac{\sigma_1^2 + \sigma_1^2}{2}} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \right) \leq t_{1-\frac{\alpha}{2};n} \right)+P\left( t_{n}\left( \frac{\lvert \mu_1 - \mu_2 - \Delta_0 \rvert}{\sqrt{\frac{\sigma_1^2 + \sigma_1^2}{2}} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \right) \leq t_{\frac{\alpha}{2};n} \right),
 \end{align*}
@@ -2378,7 +2435,7 @@ em que $n=n_1+n_2-2$ e $\Delta = \mu_1 - \mu_2, \Delta \in \mathbb{R} - \{\Delta
 \end{frame}
 
 
-\begin{frame}{Tamanho da amostra: $H_0:\mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$.}
 
 \footnotesize
 
@@ -2394,9 +2451,15 @@ Imagine que
 
 Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da amostra é solução da seguinte equação
 \scriptsize
-\begin{align*}
+\begin{align}\label{eq:pwr-t-test-hetero-bilateral}
 1-\beta = 1 - P\left( t_{2n-2}\left( \frac{\lvert \mu_1 - \mu_2 - \Delta_0 \rvert}{\sqrt{\frac{\sigma_1^2 + \sigma_1^2}{2}} \sqrt{\frac{2}{n}}} \right) \leq t_{1-\frac{\alpha}{2};2n-2} \right)+P\left( t_{2n-2}\left( \frac{\lvert \mu_1 - \mu_2 - \Delta_0\rvert}{\sqrt{\frac{\sigma_1^2 + \sigma_1^2}{2}} \sqrt{\frac{2}{n}}} \right) \leq t_{\frac{\alpha}{2};2n-2} \right).
-\end{align*}
+\end{align}
+
+A equação~\eqref{eq:pwr-t-test-hetero-bilateral} é resolvida usando métodos numéricos que estão implementados em diversos \textit{softwares}.
+\begin{description}
+	\item[No R] \lstinline|pwr_sigma_2pop|
+\end{description}
+Esta função está no pacote \lstinline|power|, que pode ser instalado usando o pacote \lstinline|devtools|: \lstinline|devtools::install_github("gilberto-sassi/power")|.
 
 \normalsize
 \end{frame}
@@ -2409,8 +2472,9 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0:\mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$.}
+\begin{frame}[fragile]{Poder do teste: $H_0:\mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$.}
 
+\scriptsize
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as hipóteses: $H_0: \mu_1 - \mu_2 = \Delta_0 = 0$ e $H_0: \mu_1 - \mu_2 \neq \Delta_0 = 0$;
 	
@@ -2422,12 +2486,19 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 		\item $P(t_{n_1+n_2-2} \leq t_{\frac{\alpha}{2}; n_1+n_2-2}) = P(t_{18} \leq t_{0,975; 18})=1-\frac{\alpha}{2} = 0,975$, então $t_{0,975; 18} = 2,101$.
 	\end{itemize}
 
-	Como $n_1=n_2=10$, $\mu_1=13$, $\sigma_1=8$, $\mu_2=16$, $\sigma_2=16$, $\Delta_0 = 0$, então o parâmetro de não-centralidade é $\mu = \frac{\lvert\mu_1 - \mu_2 - \Delta_0\rvert}{\sqrt{\frac{\sigma_1^2 + \sigma_1^2}{2}} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} = 5,93$. Então, o poder do teste é dado por
+	Como $n_1=n_2=10$, $\mu_1=13$, $\sigma_1=8$, $\mu_2=28$, $\sigma_2=16$, $\Delta_0 = 0$, então o parâmetro de não-centralidade é $\mu = \frac{\lvert\mu_1 - \mu_2 - \Delta_0\rvert}{\sqrt{\frac{\sigma_1^2 + \sigma_1^2}{2}} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} = 2,65$. Então, o poder do teste é dado por
 	\begin{align*}
 	1-\beta &= 1 - P\left( t_{n_1+n_2-2}\left(\mu \right) \leq t_{1-\frac{\alpha}{2};n_1+n_2-2} \right)+P\left( t_{n_1+n_2-2}\left( \mu \right) \leq t_{\frac{\alpha}{2};n_1+n_2-2} \right)\\
-	&= 1 - P (t_{18}(5,93) \leq 2,101) + P (t_{18}(5,93) \leq -2,101) = 0,9999.
+	&= 1 - P (t_{18}(2,65) \leq 2,101) + P (t_{18}(2,65) \leq -2,101) = 0,7082.
 	\end{align*}
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_t_test_2pop_hetero(sigma1 = 8, sigma2 = 16, delta = 13 - 28,
+		delta0 = 0, n1 = 10, n2 = 10, pwr = NULL, alternative = "two.sided",
+		sig_level = 0.05)
+\end{lstlisting}
+
 \end{frame}
 
 \begin{frame}{Tamanho da amostra: $H_0:\mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$.}
@@ -2437,7 +2508,7 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 \end{block}
 \end{frame}
 
-\begin{frame}{Tamanho da amostra: $H_0:\mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$.}
 
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as hipóteses: $H_0: \mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$;
@@ -2454,6 +2525,13 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 	
 	Então, precisamos coletar 28 amostras das comunidades urbanas e 28 amostras das comunidades rurais.
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_t_test_2pop_hetero(sigma1 = 8, sigma2 = 16, delta = 13 - 28,
+		delta0 = 0, n1 = NULL, n2 = NULL, pwr = 0.99,
+		alternative = "two.sided", sig_level = 0.05)
+\end{lstlisting}
+
 \end{frame}
 
 \begin{frame}{Poder do teste: $H_0:\mu_1 - \mu_2 \leq \Delta_0$ e $H_1: \mu_1 - \mu_2 > \Delta_0$.}
@@ -2486,7 +2564,7 @@ em que $n=n_1+n_2-2$ e $\Delta = \mu_1 - \mu_2, \Delta \in (\Delta_0, \infty)$. 
 \end{frame}
 
 
-\begin{frame}{Tamanho da amostra: $H_0:\mu_1 - \mu_2 \leq \Delta_0$ e $H_1: \mu_1 - \mu_2 > \Delta_0$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\mu_1 - \mu_2 \leq \Delta_0$ e $H_1: \mu_1 - \mu_2 > \Delta_0$.}
 
 \footnotesize
 
@@ -2502,9 +2580,15 @@ Imagine que
 
 Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da amostra é solução da seguinte equação
 \scriptsize
-\begin{align*}
+\begin{align}\label{eq:pwr-t-test-hetero-greater}
 1-\beta = 1 - P\left( t_{2n-2}\left( \frac{ \mu_1 - \mu_2 - \Delta_0 }{\sqrt{\frac{\sigma_1^2 + \sigma_1^2}{2}} \sqrt{\frac{2}{n}}} \right) \leq t_{1-\frac{\alpha}{2};2n-2} \right).
-\end{align*}
+\end{align}
+
+A equação~\eqref{eq:pwr-t-test-hetero-bilateral} é resolvida usando métodos numéricos que estão implementados em diversos \textit{softwares}.
+\begin{description}
+	\item[No R] \lstinline|pwr_sigma_2pop|
+\end{description}
+Esta função está no pacote \lstinline|power|, que pode ser instalado usando o pacote \lstinline|devtools|: \lstinline|devtools::install_github("gilberto-sassi/power")|.
 
 \normalsize
 \end{frame}
@@ -2528,12 +2612,13 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 \end{table}
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0: \mu_2 - \mu_1 \leq \Delta_0$ e $H_1: \mu_2 - \mu_1 > \Delta_0.$}
+\begin{frame}[fragile]{Poder do teste: $H_0: \mu_2 - \mu_1 \leq \Delta_0$ e $H_1: \mu_2 - \mu_1 > \Delta_0.$}
 
+\scriptsize
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as seguintes: $H_0: \mu_2 - \mu_1 \leq \Delta_0$ e $H_1: \mu_1 - \mu_2 > \Delta_0$;
 	
-	\textbf{Passo 1)} Nível de significância $\alpha=5\%$;
+	\textbf{Passo 2)} Nível de significância $\alpha=5\%$;
 	
 	Note que $n_1=10$, $n_2=15$, $\mu_1=30$, $\mu_2=40$, $\sigma_1=5$, $\sigma_2=10$, $\alpha = 0,05$. Primeiro calculamos o quantil
 	\begin{itemize}
@@ -2542,10 +2627,18 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 
 	Então, o poder do teste é dado por
 	\begin{align*}
-		1- \beta &= 1 - P\left( t_{n_1 + n_2 -2}\left( \frac{ \mu_1 - \mu_2 - \Delta_0 }{\sqrt{\frac{\sigma_1^2 + \sigma_1^2}{2}} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \right) \leq t_{1-\frac{\alpha}{2};n_1 + n_2 -2} \right)\\
+		1- \beta &= 1 - P\left( t_{n_1 + n_2 -2}\left( \frac{ \mu_2 - \mu_1 - \Delta_0 }{\sqrt{\frac{\sigma_1^2 + \sigma_1^2}{2}} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \right) \leq t_{1-\frac{\alpha}{2};n_1 + n_2 -2} \right)\\
 		&= 1 - P\left( t_{23}\left( \frac{ 40 - 30 - 0 }{\sqrt{\frac{5^2 + 10^2}{2}} \sqrt{\frac{1}{10} + \frac{1}{15}}} \right) \leq 2,069 \right)= 0,9132.
 	\end{align*}
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_t_test_2pop_hetero(sigma1 = 5, sigma2 = 10, delta = 40 - 30,
+		delta0 = 0, n1 = 10, n2 = 15, pwr = NULL,
+		alternative = "greater", sig_level = 0.05)
+\end{lstlisting}
+
+\normalsize
 \end{frame}
 
 \begin{frame}{Tamanho da amostra: $H_0: \mu_2 - \mu_1 \leq \Delta_0$ e $H_1: \mu_2 - \mu_1 > \Delta_0.$}
@@ -2567,8 +2660,9 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 \end{table}
 \end{frame}
 
-\begin{frame}{Tamanho do teste: $H_0: \mu_2 - \mu_1 \leq \Delta_0$ e $H_1: \mu_2 - \mu_1 > \Delta_0.$}
+\begin{frame}[fragile]{Tamanho do teste: $H_0: \mu_2 - \mu_1 \leq \Delta_0$ e $H_1: \mu_2 - \mu_1 > \Delta_0.$}
 
+\small
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as seguintes: $H_0: \mu_2 - \mu_1 \leq \Delta_0$ e $H_1: \mu_1 - \mu_2 > \Delta_0$;
 
@@ -2576,12 +2670,20 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 	
 	Note que $n_1=n_2=n$, $\mu_1=30$, $\mu_2=40$, $\sigma_1=5$, $\sigma_2=10$, $1-\beta = 0,99$.	Então, o tamanho \sout{mínimo} de amostra é dado por
 	\begin{align*}
-		1- \beta &= 0,99 = 1 - P\left( t_{2n -2}\left( \frac{ \mu_1 - \mu_2 - \Delta_0 }{\sqrt{\frac{\sigma_1^2 + \sigma_1^2}{2}} \sqrt{\frac{2}{n}}} \right) \leq t_{1-\frac{\alpha}{2};2n -2} \right)\\
-		&= 1 - P\left( t_{2n -2}\left( \frac{ 30 - 40 - 0 }{\sqrt{\frac{5^2 + 10^2}{2}} \sqrt{\frac{2}{n}}} \right) \leq t_{0,975;2n -2} \right)
+		1- \beta &= 0,99 = 1 - P\left( t_{2n -2}\left( \frac{ \mu_2 - \mu_1 - \Delta_0 }{\sqrt{\frac{\sigma_1^2 + \sigma_1^2}{2}} \sqrt{\frac{2}{n}}} \right) \leq t_{1-\alpha;2n -2} \right)\\
+		&= 1 - P\left( t_{2n -2}\left( \frac{ -30 + 40 - 0 }{\sqrt{\frac{5^2 + 10^2}{2}} \sqrt{\frac{2}{n}}} \right) \leq t_{0,95;2n -2} \right)
 	\end{align*}	
 	
-	Então, precisamos coletar 24 observações da primeira variável e coletar 24 observações da segunda variável.
+	Então, precisamos coletar 21 observações da primeira variável e coletar 21 observações da segunda variável.
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_t_test_2pop_hetero(sigma1 = 5, sigma2 = 10, delta = 40 - 30,
+		delta0 = 0, n1 = NULL, n2 = NULL, pwr = 0.99,
+		alternative = "greater", sig_level = 0.05)
+\end{lstlisting}
+
+\normalsize
 \end{frame}
 
 
@@ -2973,9 +3075,9 @@ em que $ \mu_D \in \mathbb{R} - \{\Delta_0\}.$ Alguns livros chamam a Função P
 \end{frame}
 
 
-\begin{frame}{Tamanho da amostra: $H_0:\mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\mu_1 - \mu_2 = \Delta_0$ e $H_1: \mu_1 - \mu_2 \neq \Delta_0$.}
 
-\normalsize
+\scriptsize
 Imagine que
 \begin{itemize}
 	\item Hipóteses: $H_0:\mu_D= \mu_1 - \mu_2 = \Delta_0$ e $H_1:\mu_D= \mu_1 -  \mu_2 \neq \Delta_0$;
@@ -2987,11 +3089,18 @@ Imagine que
 
 Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da amostra é solução da seguinte equação
 \scriptsize
-\begin{align*}
+\begin{align}\label{eq:pwr-paired-t-test-bilateral}
 1-\beta = 1 - P\left( t_{n-1}\left( \frac{(\mu_D - \Delta_0)\sqrt{n}}{\sigma_D} \right) \leq t_{1-\frac{\alpha}{2};n-1} \right) + P\left( t_{n-1}\left( \frac{(\mu_D - \Delta_0)\sqrt{n}}{\sigma_D} \right) \leq t_{\frac{\alpha}{2};n-1} \right).
-\end{align*}
-
+\end{align}
 \normalsize
+
+A equação~\eqref{eq:pwr-paired-t-test-bilateral} é resolvida usando métodos numéricos que estão implementados em diversos \textit{softwares}.
+\begin{description}
+	\item[No R] \lstinline|pwr_paired_t_test|
+\end{description}
+Esta função está no pacote \lstinline|power|, que pode ser instalado usando o pacote \lstinline|devtools|: \lstinline|devtools::install_github("gilberto-sassi/power")|.
+
+
 \end{frame}
 
 \begin{frame}{Poder do teste: $H_0:\mu_D = \mu_1 - \mu_2 = \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 \neq \Delta_0$.}
@@ -3004,7 +3113,7 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0:\mu_D = \mu_1 - \mu_2 = \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 \neq \Delta_0$.}
+\begin{frame}[fragile]{Poder do teste: $H_0:\mu_D = \mu_1 - \mu_2 = \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 \neq \Delta_0$.}
 
 \footnotesize
 \begin{block}{Solução}
@@ -3014,7 +3123,7 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 	
 	\textbf{Passo 2)} Nível de significância $\alpha=5\%$;
 	
-	Note que $\mu_D = 0,3$, $\sigma_D = 0,1$, $n=1$, $\Delta_0=0$, $\alpha=5\%$, $\mu =  \frac{( \mu_D - \Delta_0)\sqrt{n}}{\sigma_D} =1,8 $.
+	Note que $\mu_D = 0,3$, $\sigma_D = 0,1$, $n=9$, $\Delta_0=0$, $\alpha=5\%$, $\mu =  \frac{( \mu_D - \Delta_0)\sqrt{n}}{\sigma_D} =9$.
 	
 	Primeiro calculamos os quantis de distribuição normal padrão:
 	\begin{itemize}
@@ -3025,10 +3134,15 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 	Então, o poder de teste é dado por
 	\begin{align*}
 	1-\beta &= 1 - P\left( t_{n-1}\left( \frac{(\mu_D - \Delta_0)\sqrt{n}}{\sigma_D} \right) \leq t_{1-\frac{\alpha}{2};n-1} \right) + P\left( t_{n-1}\left( \frac{(\mu_D - \Delta_0)\sqrt{n}}{\sigma_D} \right) \leq t_{\frac{\alpha}{2};n-1} \right)\\
-	&= 1 - P \left( t_8 (1,8) \leq 2,306 \right) + P \left( t_8 (1,8) \leq -2,306 \right)\\
-	&=0,3293.
+	&= 1 - P \left( t_8 (9) \leq 2,306 \right) + P \left( t_8 (9) \leq -2,306 \right) =1.
 	\end{align*}
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_paired_t_test(sigma_d = 0.1, delta = 0.3, delta0 = 0, n = 9,
+		pwr = NULL, alternative = "two.sided", sig_level = 0.05)
+\end{lstlisting}
+
 \normalsize
 
 \end{frame}
@@ -3043,7 +3157,7 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 
 \end{frame}
 
-\begin{frame}{Tamanho do teste: $H_0:\mu_D = \mu_1 - \mu_2 = \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 \neq \Delta_0$.}
+\begin{frame}[fragile]{Tamanho do teste: $H_0:\mu_D = \mu_1 - \mu_2 = \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 \neq \Delta_0$.}
 
 \begin{block}{Solução}
 Considere $\mu_1=\mu_{\tiny Karlsruhe}$ é a média do ponto de cisalhamento para o procedimento de Karlsruhe e $\mu_2 = \mu_{\tiny Lehigh}$ é a média do ponto de cisalhamento para o procedimento de Lehigh. Então $\mu_D = \mu_1 - \mu_2$.
@@ -3062,20 +3176,12 @@ Como $\mu_D = 0,3$, $\sigma_D = 0,5$, $1-\beta=0,99$, $\alpha=5\%$, $\Delta_0=0$
 
 Então, este pesquisador precisa analisar $n=54$ vigas de aço.
 \end{block}
-\end{frame}
 
-\begin{frame}{Tamanho do teste: $H_0:\mu_D = \mu_1 - \mu_2 = \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 \neq \Delta_0$.}
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_paired_t_test(sigma_d = 0.5, delta = 0.3, delta0 = 0, n = NULL,
+		pwr = 0.99, alternative = "two.sided", sig_level = 0.05)
+\end{lstlisting}
 
-\normalsize
-
-\begin{block}{Solução}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=\linewidth]{figures/samp-size-paired-t-test-bilateral.png}
-		\caption{Cálculo do tamanho da amostra no \texttt{R}.}
-	\end{figure}
-	
-\end{block}
 \end{frame}
 
 \begin{frame}{Poder do teste: $H_0:\mu_D = \mu_1 - \mu_2 \leq \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 > \Delta_0$.}
@@ -3121,9 +3227,15 @@ Imagine que
 
 Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da amostra é solução da seguinte equação
 \scriptsize
-\begin{align*}
+\begin{align}\label{eq:pwr-paired-t-test-greater}
 1-\beta = 1 - P\left( t_{n-1}\left( \frac{(\mu_D - \Delta_0)\sqrt{n}}{\sigma_D} \right) \leq t_{1-\alpha;n-1} \right).
-\end{align*}
+\end{align}
+
+A equação~\eqref{eq:pwr-paired-t-test-greater} é resolvida usando métodos numéricos que estão implementados em diversos \textit{softwares}.
+\begin{description}
+	\item[No R] \lstinline|pwr_paired_t_test|
+\end{description}
+Esta função está no pacote \lstinline|power|, que pode ser instalado usando o pacote \lstinline|devtools|: \lstinline|devtools::install_github("gilberto-sassi/power")|.
 
 \normalsize
 \end{frame}
@@ -3138,8 +3250,9 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0:\mu_D = \mu_1 - \mu_2 \leq \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 > \Delta_0$.}
+\begin{frame}[fragile]{Poder do teste: $H_0:\mu_D = \mu_1 - \mu_2 \leq \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 > \Delta_0$.}
 
+\small
 \begin{block}{Solução}
 	Considere $\mu_1$ o nível de colesterol antes do estudo começar e $\mu_2$ o nível de colesterol depois do estudo finalizado.
 	
@@ -3156,11 +3269,16 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 
 	Então, o poder do teste é dado por
 	\begin{align*}
-	1-\beta &= 1 - P\left( t_{n-1}\left( \frac{(\mu_D - \Delta_0)\sqrt{n}}{\sigma_D} \right) \leq t_{1-\alpha;n-1} \right)\\
-	&= 1 - P\left( t_{14}\left(6,455 \right) \leq 1,761 \right)  = 1.
+	1-\beta &= 1 - P\left( t_{n-1}\left( \frac{(\mu_D - \Delta_0)\sqrt{n}}{\sigma_D} \right) \leq t_{1-\alpha;n-1} \right) = 1 - P\left( t_{14}\left(6,455 \right) \leq 1,761 \right)  = 1.
 	\end{align*}
 \end{block}
 
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_paired_t_test(sigma_d = 15, delta = 25, delta0 = 0, n = 15,
+		pwr = NULL, alternative = "greater", sig_level = 0.05)
+\end{lstlisting}
+
+\normalsize
 \end{frame}
 
 \begin{frame}{Tamanho da amostra: $H_0:\mu_D = \mu_1 - \mu_2 \leq \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 > \Delta_0$.}
@@ -3173,8 +3291,9 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 
 \end{frame}
 
-\begin{frame}{Tamanho da amostra: $H_0:\mu_D = \mu_1 - \mu_2 \leq \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 > \Delta_0$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\mu_D = \mu_1 - \mu_2 \leq \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 > \Delta_0$.}
 
+\small
 \begin{block}{Solução}
 	Considere $\mu_1$ o nível de colesterol antes do estudo começar e $\mu_2$ o nível de colesterol depois do estudo finalizado.
 	
@@ -3188,24 +3307,15 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 	&= 1 - P\left( t_{n-1}\left( \frac{(25 - 0)\sqrt{n}}{15} \right) \leq t_{0,95;n-1} \right).
 	\end{align*}
 	
-	Então, precisamos acompanhar oito homens enter $35$ e $50$.
+	Então, precisamos acompanhar nove homens enter $35$ e $50$.
 \end{block}
 
-\end{frame}
-
-\begin{frame}{Tamanho da amostra: $H_0:\mu_D = \mu_1 - \mu_2 \leq \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 > \Delta_0$.}
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_paired_t_test(sigma_d = 15, delta = 25, delta0 = 0, n = 15,
+		pwr = NULL, alternative = "greater", sig_level = 0.05)
+\end{lstlisting}
 
 \normalsize
-
-\begin{block}{Solução}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=\linewidth]{figures/samp-size-paired-t-test-unilateral-h1-upper.png}
-		\caption{Cálculo do tamanho da amostra no \texttt{R}.}
-	\end{figure}
-	
-\end{block}
-
 \end{frame}
 
 \begin{frame}{Poder do teste: $H_0:\mu_D = \mu_1 - \mu_2 \geq \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 < \Delta_0$.}
@@ -3237,7 +3347,7 @@ Alguns livros chamam a Função Poder de \textcolor{important}{Curva de Caracter
 \end{frame}
 
 
-\begin{frame}{Tamanho da amostra: $H_0:\mu_1 - \mu_2 \leq \Delta_0$ e $H_1: \mu_1 - \mu_2 > \Delta_0$.}
+\begin{frame}{Tamanho da amostra: $H_0:\mu_1 - \mu_2 \geq \Delta_0$ e $H_1: \mu_1 - \mu_2 < \Delta_0$.}
 
 \normalsize
 Imagine que
@@ -3251,9 +3361,15 @@ Imagine que
 
 Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da amostra é solução da seguinte equação
 \scriptsize
-\begin{align*}
+\begin{align}\label{eq:pwr-paired-t-test-less}
 1-\beta = P\left( t_{n-1}\left( \frac{(\mu_D - \Delta_0)\sqrt{n}}{\sigma_D} \right) \leq t_{\alpha;n-1} \right).
-\end{align*}
+\end{align}
+
+A equação~\eqref{eq:pwr-paired-t-test-less} é resolvida usando métodos numéricos que estão implementados em diversos \textit{softwares}.
+\begin{description}
+	\item[No R] \lstinline|pwr_paired_t_test|
+\end{description}
+Esta função está no pacote \lstinline|power|, que pode ser instalado usando o pacote \lstinline|devtools|: \lstinline|devtools::install_github("gilberto-sassi/power")|.
 
 \normalsize
 \end{frame}
@@ -3277,7 +3393,7 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0:\mu_D = \mu_1 - \mu_2 \geq \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 < \Delta_0$.}
+\begin{frame}[fragile]{Poder do teste: $H_0:\mu_D = \mu_1 - \mu_2 \geq \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 < \Delta_0$.}
 
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as seguintes hipóteses: $H_0: \mu_D \geq \Delta_0 = 0$ e $H_1: \mu_D < \Delta_0 = 0$;
@@ -3294,10 +3410,14 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 	Então, o poder do teste é dado por
 	\begin{align*}
 	1-\beta &=  P\left( t_{n-1}\left( \frac{(\mu_D - \Delta_0)\sqrt{n}}{\sigma_D} \right) \leq t_{\alpha;n-1} \right)\\
-	&= P\left( t_{19}\left( \frac{(-5 - 0)\sqrt{20}}{10} \right) \leq -1,729 \right)\\
-	&=0,6952.
+	&= P\left( t_{19}\left( \frac{(-5 - 0)\sqrt{20}}{10} \right) \leq -1,729 \right) =0,6952.
 	\end{align*}
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_paired_t_test(sigma_d = 10, delta = -5, delta0 = 0, n = 20,
+		pwr = NULL, alternative = "less", sig_level = 0.05)
+\end{lstlisting}
 
 \end{frame}
 
@@ -3320,7 +3440,7 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 
 \end{frame}
 
-\begin{frame}{Tamanho da amostra: $H_0:\mu_D = \mu_1 - \mu_2 \geq \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 < \Delta_0$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\mu_D = \mu_1 - \mu_2 \geq \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 < \Delta_0$.}
 
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as seguintes hipóteses: $H_0: \mu_D \geq \Delta_0 = 0$ e $H_1: \mu_D < \Delta_0 = 0$;
@@ -3333,21 +3453,12 @@ Considere $1-\beta$, $\alpha$, $n_1=n_2=n$, então o tamanho \sout{mínimo} da a
 	\end{align*}
 \end{block}
 
-Então, o pesquisador precisa acompanhar $n=254$ elementos ou indivíduos e anotar o resultado antes e depois do estudo observacional completamente aleatório.
-\end{frame}
+Então, o pesquisador precisa acompanhar $n=65$ elementos ou indivíduos e anotar o resultado antes e depois do estudo observacional completamente aleatório.
 
-\begin{frame}{Tamanho da amostra: $H_0:\mu_D = \mu_1 - \mu_2 \leq \Delta_0$ e $H_1:\mu_D =  \mu_1 - \mu_2 > \Delta_0$.}
-
-\normalsize
-
-\begin{block}{Solução}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=\linewidth]{figures/samp-size-paired-t-test-unilateral-h1-lower.png}
-		\caption{Cálculo do tamanho da amostra no \texttt{R}.}
-	\end{figure}
-	
-\end{block}
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_paired_t_test(sigma_d = 10, delta = -5, delta0 = 0, n = NULL,
+		pwr = 0.99, alternative = "less", sig_level = 0.05)
+\end{lstlisting}
 
 \end{frame}
 
@@ -3682,7 +3793,7 @@ Imagine que
 Poder do teste é dado
 \begin{align*}
 \textcolor{important}{1-\beta} &=1 - \left[P\left( z_{\frac{\alpha}{2}} \leq Z_0 \leq z_{1-\frac{\alpha}{2}} \mid H_1 \right)\right] = 1 - \left[P\left( z_{\frac{\alpha}{2}} \leq Z_0 \leq z_{1-\frac{\alpha}{2}} \mid \Delta \neq \Delta_0 \right)\right]\\
-&\approx \textcolor{important}{1 - \Phi\left( z_{1-\frac{\alpha}{2}} - \frac{p_1-p_2 - \Delta_0}{\sqrt{\frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2}}} \right) + \Phi\left( z_{\frac{\alpha}{2}} - \frac{p_1-p_2 - \Delta_0}{\sqrt{\frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2}}} \right).}
+&\approx \textcolor{important}{1 - \Phi\left( z_{1-\frac{\alpha}{2}} - \frac{p_1-p_2 - \Delta_0}{\sqrt{\frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2}}} \right)\ref{tab:h1-less-2-proportion-power} + \Phi\left( z_{\frac{\alpha}{2}} - \frac{p_1-p_2 - \Delta_0}{\sqrt{\frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2}}} \right).}
 \end{align*}
 A \textcolor{important}{Função Poder}, dado o tamanho da amostra $n$, é uma função das médias populacionais na hipótese alternativa  $\pi: \mathbb{R} - \{\Delta_0\} \longrightarrow [0,1]$ dada por
 \begin{align*}
@@ -4543,6 +4654,8 @@ Considere um estudo exploratório que estuda a recuperação funcional de pacien
 
 \end{frame}
 
+\subsection{Poder e tamanho da amostra.}
+
 \begin{frame}{Poder do teste: $H_0:\mbox{Não existe associação}$ e $H_1:\mbox{Existe associação} $.}
 
 \normalsize
@@ -4606,9 +4719,9 @@ Ideal seria calcular $w$ através de uma amostra piloto ou obtê-lo usando um si
 
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0:\mbox{Não existe associação}$ e $H_1:\mbox{Existe associação} $.}
+\begin{frame}[fragile]{Poder do teste: $H_0:\mbox{Não existe associação}$ e $H_1:\mbox{Existe associação} $.}
 
-\small
+\scriptsize
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as seguintes hipóteses:
 	\begin{itemize}
@@ -4628,10 +4741,15 @@ Ideal seria calcular $w$ através de uma amostra piloto ou obtê-lo usando um si
 	Como $n=400$, $r=2$, $s=3$, $w=0,3$ e $\lambda = n \cdot w^2 = 400 \cdot 0,3^2 = 36$, então o poder do teste é dado por
 	\begin{align*}
 		1-\beta &= 1 - P\left( \chi_{(r-1)\cdot (s-1)}^2(\lambda) \leq \chi_{1-\alpha; (r-1)\cdot (s-1)}^2 \right)\\
-		&= 1 - P\left( \chi_{(2-1)\cdot (3-1)}^2(\lambda) \leq \chi_{1-0,05; (2-1)\cdot (3-1)}^2 \right)\\
 		&= 1 - P\left( \chi_{2}^2(36) \leq \chi_{0,95; 2}^2 \right) = 1 - P\left( \chi_{2}^2(36) \leq 5,9914645 \right) = 0,9999.
 	\end{align*}
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_chisq_test_association(es = 0.3, nrow = 2, ncol = 3, n = 400,
+		pwr = NULL, sig_level = 0.05)
+\end{lstlisting}
+
 \normalsize
 
 \end{frame}
@@ -4646,9 +4764,9 @@ Ideal seria calcular $w$ através de uma amostra piloto ou obtê-lo usando um si
 
 \end{frame}
 
-\begin{frame}{Tamanho da amostra: $H_0:\mbox{Não existe associação}$ e $H_1:\mbox{Existe associação} $.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\mbox{Não existe associação}$ e $H_1:\mbox{Existe associação} $.}
 
-\small
+\scriptsize
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as seguintes hipóteses:
 	\begin{itemize}
@@ -4665,13 +4783,18 @@ Ideal seria calcular $w$ através de uma amostra piloto ou obtê-lo usando um si
 		\item $P\left( \chi^2_{(r-1)\cdot (s-1)} \leq \chi^2_{1-\alpha;(r-1)\cdot (s-1)} \right) = P\left( \chi^2_{(2-1)\cdot (3-1)} \leq \chi^2_{0,95;(2-1)\cdot (3-1)} \right) = \allowbreak 1-\alpha=0,95$, então $\chi^2_{0,95;2} = 5,9914645$.
 	\end{itemize}
 	
-	Como $1-\beta$, $r=2$, $s=3$, $w=0,3$ e $\lambda = n \cdot w^2 = n \cdot 0,3^2$, então o poder do teste é dado por
+	Como $1-\beta=0,99$, $r=2$, $s=3$, $w=0,3$ e $\lambda = n \cdot w^2 = n \cdot 0,3^2$, então o poder do teste é dado por
 	\begin{align*}
 	1-\beta &= 0,99 = 1 - P\left( \chi_{(r-1)\cdot (s-1)}^2(n \cdot w^2) \leq \chi_{1-\alpha; (r-1)\cdot (s-1)}^2 \right)\\
 	&= 1 - P\left( \chi_{2}^2(n \cdot 0,3^2) \leq \chi_{0,95; 2}^2 \right) = 1 - P\left( \chi_{2}^2(n \cdot 0,3^2) \leq 5,9914645 \right)
 	\end{align*}
 \end{block}
 Então, precisamos acompanhar $n=238$ pacientes.
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_chisq_test_association(es = 0.3, nrow = 2, ncol = 3, n = NULL,
+		pwr = 0.99, sig_level = 0.05)
+\end{lstlisting}
 \normalsize
 
 \end{frame}
@@ -5629,7 +5752,7 @@ $$n = \left\lceil \left[\frac{z_{1-\alpha} + z_{1-\beta} }{ \frac{1}{2} \ln \lef
 	
 	\textbf{Passo 2)} Nível de significância $\alpha = 0,05$;
 	
-	Note que $\rho_0=-0,8$, $\rho=-0,95$, $n=200$ e $\mu = \frac{\frac{1}{2} \ln \left( \frac{1 + \rho}{1 - \rho} \right) - \frac{1}{2} \ln \left( \frac{1 + \rho_0}{1 - \rho_0} \right)}{\sqrt{\frac{1}{n-3}}}= \allowbreak \frac{\frac{1}{2} \ln \left( \frac{1 - 0,95}{1 + 0,95} \right) - \frac{1}{2} \ln \left( \frac{1 -0,8}{1 + 0,8} \right)}{\sqrt{\frac{1}{200-3}}} = -1,94$.
+	Note que $\rho_0=-0,8$, $\rho=-0,95$, $n=200$ e $\mu = \frac{\frac{1}{2} \ln \left( \frac{1 + \rho}{1 - \rho} \right) - \frac{1}{2} \ln \left( \frac{1 + \rho_0}{1 - \rho_0} \right)}{\sqrt{\frac{1}{n-3}}}= \allowbreak \frac{\frac{1}{2} \ln \left( \frac{1 - 0,95}{1 + 0,95} \right) - \frac{1}{2} \ln \left( \frac{1 -0,8}{1 + 0,8} \right)}{\sqrt{\frac{1}{200-3}}} = -10,29$.
 	
 	Primeiro encontramos os quantis da distribuição normal:
 	\begin{itemize}
@@ -5639,9 +5762,9 @@ $$n = \left\lceil \left[\frac{z_{1-\alpha} + z_{1-\beta} }{ \frac{1}{2} \ln \lef
 	Então, o poder do teste é dado por
 	\begin{align*}
 		1 - \beta &= \Phi\left( z_\alpha - \mu \right)\\
-		&= \Phi\left( -1,65 - (-1,94) \right)\\
-		&= \Phi(0,29)\\
-		&= 0,6141.
+		&= \Phi\left( -1,65 - (-10,29) \right)\\
+		&= \Phi(9,64)\\
+		&= 1.
 	\end{align*}
 \end{block}
 

@@ -51,6 +51,37 @@
 \usepackage{xcolor}
 \usepackage{ulem}
 
+
+\usepackage{listings}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\renewcommand{\lstlistingname}{Código}% Listing -> Código
+\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s}% List of Listings -> List of Código
+
 \usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
 \AtBeginEnvironment{figure}{\setcounter{subfigure}{0}}% Resets subfigure counter at start of figure environment
 
@@ -920,7 +951,7 @@ Chamamos $\frac{\delta}{\sigma}$  de \textit{tamanho do efeito} ou \textit{effec
 	
 	\textbf{Passo 2)} Nível de significância: $\alpha = 5\%$
 	
-	Note que $\delta = \mu - \mu_0 = 10 - 8 =2$ e $\beta = 1 - 0,95=0,05$, então $\Phi\left( z_\beta \right) = \beta = 0,05$, $z_{0,05} = -1,65$.
+	Note que $\delta = \mu - \mu_0 = 10 - 8 =2$, $\beta = 1 - 0,95=0,05$ e $\sigma = 2$, então $\Phi\left( z_\beta \right) = \beta = 0,05$, $z_{0,05} = -1,65$.
 	
 	Vamos encontrar os quantis da distribuição normal padrão:
 	\begin{itemize}
@@ -1493,8 +1524,10 @@ Dado o poder do teste $1-\beta$ (e o erro $\beta$), nível de significância $\a
 
 A equação~\eqref{eq:sample-size-s2-unknown-bilateral} é resolvida usando métodos numéricos. Tais métodos são estão implementados em diversos \textit{softwares}:
 \begin{description}
-	\item[No R] \texttt{power.t.test}.
+	\item[No R] \lstinline|pwr_t_test_1pop|.
 \end{description}
+
+Esta função está no pacote \lstinline|power|, que pode ser instalado usando o pacote \lstinline|devtools|: \lstinline|devtools::install_github("gilberto-sassi/power")|.
 
 \normalsize
 
@@ -1511,8 +1544,9 @@ A equação~\eqref{eq:sample-size-s2-unknown-bilateral} é resolvida usando mét
 
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0:\mu = \mu_0$ e $H_1: \mu \neq \mu_0$.}
+\begin{frame}[fragile]{Poder do teste: $H_0:\mu = \mu_0$ e $H_1: \mu \neq \mu_0$.}
 
+\small
 
 \begin{block}{Solução}
 	\textbf{Passo 1)} Querer testar as seguintes hipóteses: $H_0: \mu = \mu_0$ e $H_1: \mu \neq \mu_0$, em que $\mu_0=12$;
@@ -1537,20 +1571,15 @@ A equação~\eqref{eq:sample-size-s2-unknown-bilateral} é resolvida usando mét
 	\end{align*} 
 \end{block}
 
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_t_test_1pop(m = 16, m0 = 12, sigma = 2, n = 5, pwr = NULL,
+		alternative = "two.sided", sig_level = 0.01)
+\end{lstlisting}
+\normalsize
+
+
 \end{frame}
 
-
-
-
-\begin{frame}{Poder do teste: $H_0:\mu = \mu_0$ e $H_1: \mu \neq \mu_0$.}
-
-\begin{figure}[htbp]
-	\centering
-	\caption{Cálculo do poder do teste no \texttt{R}.}
-	\includegraphics[width=0.9\linewidth]{figures/t-noncentral-power.png}
-\end{figure}
-
-\end{frame}
 
 \begin{frame}{Tamanho da amostra: $H_0:\mu = \mu_0$ e $H_1: \mu \neq \mu_0$.}
 
@@ -1563,7 +1592,7 @@ A equação~\eqref{eq:sample-size-s2-unknown-bilateral} é resolvida usando mét
 
 \end{frame}
 
-\begin{frame}{Tamanho da amostra: $H_0:\mu = \mu_0$ e $H_1: \mu \neq \mu_0$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\mu = \mu_0$ e $H_1: \mu \neq \mu_0$.}
 
 
 \begin{block}{Solução}
@@ -1588,22 +1617,27 @@ A equação~\eqref{eq:sample-size-s2-unknown-bilateral} é resolvida usando mét
 \end{block}
 Então, precisamos analisar o consumo de oxigênio nos rins em $n=8$ pacientes com moléstia.
 
+Código do \lstinline|R|:
+\begin{lstlisting}[caption = Código no R., language = C]
+pwr_t_test_1pop(m = 16, m0 = 12, sigma = 2, n = NULL, pwr = 0.95,
+		alternative = "two.sided", sig_level = 0.01)
+\end{lstlisting}
 
 \end{frame}
 
-\begin{frame}{Tamanho da amostra: $H_0:\mu = \mu_0$ e $H_1: \mu \neq \mu_0$.}
-
-\begin{figure}[htbp]
-	\centering
-	\caption{Cálculo do tamanho da amostra no \texttt{R}.}
-	\includegraphics[width=0.9\linewidth]{figures/t-noncentral-sample-size-R.png}
-\end{figure}
-
-\end{frame}
+%\begin{frame}{Tamanho da amostra: $H_0:\mu = \mu_0$ e $H_1: \mu \neq \mu_0$.}
+%
+%\begin{figure}[htbp]
+%	\centering
+%	\caption{Cálculo do tamanho da amostra no \texttt{R}.}
+%	\includegraphics[width=0.9\linewidth]{figures/t-noncentral-sample-size-R.png}
+%\end{figure}
+%
+%\end{frame}
 
 \begin{frame}{Poder do teste: $H_0:\mu \geq \mu_0$ e $H_1: \mu < \mu_0$.}
 
-\normalsize
+\small
 
 Imagine que
 \begin{itemize}
@@ -1618,13 +1652,13 @@ Imagine que
 
 Poder do teste é dado
 \begin{align*}
-\textcolor{important}{1-\beta} &=1 - \left[P\left( T_0 \geq t_{\alpha, n-1} \mid \mu = \mu_0 + \delta \right)\right]  = P\left( t_{n-1}\left( \frac{\delta\sqrt{n}}{\sigma} \right) \leq t_{\alpha, n-1} \leq \right).
+\textcolor{important}{1-\beta} &=1 - \left[P\left( T_0 \geq t_{\alpha, n-1} \mid \mu = \mu_0 + \delta \right)\right]  = P\left( t_{n-1}\left( \frac{\delta\sqrt{n}}{\sigma} \right) \leq t_{\alpha, n-1} \right).
 \end{align*}
 \vfill
 
 A \textcolor{important}{Função Poder}, dado o tamanho da amostra $n$, é uma função das médias populacionais na hipótese alternativa  $\pi: (-\infty, 0) \longrightarrow [0,1]$ dada por
 \begin{align*}
-\pi(\delta) =  P\left( t_{n-1}\left( \frac{\delta\sqrt{n}}{\sigma} \right) \leq t_{\alpha, n-1} \leq \right),\qquad \delta = \mu - \mu_0, \delta \in (-\infty, 0).
+\pi(\delta) =  P\left( t_{n-1}\left( \frac{\delta\sqrt{n}}{\sigma} \right) \leq t_{\alpha, n-1}  \right),\qquad \delta = \mu - \mu_0, \delta \in (-\infty, 0).
 \end{align*}
 Alguns livros chamada a Função Poder de \textcolor{important}{Curva de Característica Operacional.}
 
@@ -1654,8 +1688,10 @@ Dado o poder do teste $1-\beta$ (e o erro $\beta$), nível de significância $\a
 
 A equação~\eqref{eq:sample-size-s2-unknown-unilateral-upper} é resolvida usando métodos numéricos. Tais métodos são estão implementados em diversos \textit{softwares}:
 \begin{description}
-	\item[No R] \texttt{power.t.test}
+	\item[No R] \lstinline|pwr_t_test_1pop|.
 \end{description}
+
+Esta função está no pacote \lstinline|power|, que pode ser instalado usando o pacote \lstinline|devtools|: \lstinline|devtools::install_github("gilberto-sassi/power")|.
 
 \normalsize
 
@@ -1671,9 +1707,9 @@ A equação~\eqref{eq:sample-size-s2-unknown-unilateral-upper} é resolvida usan
 
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0:\mu \geq \mu_0$ e $H_1: \mu < \mu_0$.}
+\begin{frame}[fragile]{Poder do teste: $H_0:\mu \geq \mu_0$ e $H_1: \mu < \mu_0$.}
 
-\large
+\normalsize
 
 \begin{block}{Solução}
 	\textbf{Passo 1)} Queremos testar as seguintes hipóteses: $H_0: \mu \geq \mu_0$ e $H_1: \mu < \mu_0$, em que $\mu_0=5$;
@@ -1681,7 +1717,7 @@ A equação~\eqref{eq:sample-size-s2-unknown-unilateral-upper} é resolvida usan
 	\textbf{Passo 2)} Nível de significância $\alpha = 5\%$;
 	
 	
-	Note que $\mu=3=\mu_0 + \delta = 5 + \delta$, $\delta = -2$, $\sigma = 2$ e $\alpha=0,05$.
+	Note que $\mu=3=\mu_0 + \delta = 5 + \delta$, $\delta = -2$, $\sigma = 2$, $n=20$ e $\alpha=0,05$.
 	
 	Primeiro vamos encontrar o quantil da distribuição $t$-Student:
 	\begin{itemize}
@@ -1691,22 +1727,16 @@ A equação~\eqref{eq:sample-size-s2-unknown-unilateral-upper} é resolvida usan
 	Então o poder do teste é dado por
 	\begin{align*}
 		1-\beta &= P \left( t_{n-1}\left( \frac{\delta\sqrt{n}}{\sigma}\right) \leq t_{\alpha, n-1}  \right) = P \left( t_{9}\left( \frac{-2\sqrt{10}}{2}\right) \leq t_{0,05;, 9} \right) \\ 
-		&= P \left( t_{9}\left( \frac{-2\sqrt{10}}{2}\right) \leq -1,833 \right)\\
-		&= 0,8975.
+		&= P \left( t_{9}\left( \frac{-2\sqrt{10}}{2}\right) \leq -1,833 \right) = 0,8975.
 	\end{align*}
 \end{block}
 
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_t_test_1pop(m = 3, m0 = 5, sigma = 2, n = 10, pwr = NULL,
+		alternative = "less", sig_level = 0.05)
+\end{lstlisting}
+
 \normalsize
-
-\end{frame}
-
-\begin{frame}{Poder do teste: $H_0:\mu \geq \mu_0$ e $H_1: \mu < \mu_0$.}
-
-\begin{figure}[htbp]
-	\centering
-	\caption{Cálculo do poder do teste no \texttt{R}.}
-	\includegraphics[width=0.9\linewidth]{figures/t-noncentral-power-unilateral-lower-R.png}
-\end{figure}
 
 \end{frame}
 
@@ -1724,7 +1754,7 @@ A equação~\eqref{eq:sample-size-s2-unknown-unilateral-upper} é resolvida usan
 
 
 
-\begin{frame}{Tamanho da amostra: $H_0:\mu \geq \mu_0$ e $H_1: \mu < \mu_0$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0:\mu \geq \mu_0$ e $H_1: \mu < \mu_0$.}
 
 
 \begin{block}{Solução}
@@ -1746,19 +1776,11 @@ A equação~\eqref{eq:sample-size-s2-unknown-unilateral-upper} é resolvida usan
 \end{block}
 Então, precisamos acompanhar $n=13$ bebês da periferia.
 
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_t_test_1pop(m = 3, m0 = 5, sigma = 2, n = NULL, pwr = 0.95, alternative = "less", sig_level = 0.05)
+\end{lstlisting}
 
 \end{frame}
-
-\begin{frame}{Poder do teste: $H_0:\mu \geq \mu_0$ e $H_1: \mu < \mu_0$.}
-
-\begin{figure}[htbp]
-	\centering
-	\caption{Cálculo do tamanho da amostra no \texttt{R}.}
-	\includegraphics[width=0.9\linewidth]{figures/t-noncentral-sample-size-unilateral-upper-R.png}
-\end{figure}
-
-\end{frame}
-
 
 \begin{frame}{Poder do teste: $H_0:\mu \leq \mu_0$ e $H_1: \mu > \mu_0$.}
 
@@ -1813,8 +1835,10 @@ Dado o poder do teste $1-\beta$ (e o erro $\beta$), nível de significância $\a
 
 A equação~\eqref{eq:sample-size-s2-unknown-unilateral-lower} é resolvida usando métodos numéricos. Tais métodos são estão implementados em diversos \textit{softwares}:
 \begin{description}
-\item[No R] \texttt{power.t.test}
+\item[No R] \lstinline|pwr_t_test_1pop|
 \end{description}
+
+Esta função está no pacote \lstinline|power|, que pode ser instalado usando o pacote \lstinline|devtools|: \lstinline|devtools::install_github("gilberto-sassi/power")|.
 
 \normalsize
 
@@ -1846,7 +1870,7 @@ A equação~\eqref{eq:sample-size-s2-unknown-unilateral-lower} é resolvida usan
 
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0:\mu \leq \mu_0$ e $H_1: \mu > \mu_0$.}
+\begin{frame}[fragile]{Poder do teste: $H_0:\mu \leq \mu_0$ e $H_1: \mu > \mu_0$.}
 
 \begin{block}{Solução}
 	\textbf{Passo 1)} Do enunciado, sabemos que queremos testar as hipóteses: $H_0: \mu \leq \mu_0$ e $H_1: \mu > \mu_0$;
@@ -1863,20 +1887,16 @@ A equação~\eqref{eq:sample-size-s2-unknown-unilateral-lower} é resolvida usan
 	Então o poder do teste é dado por
 	\begin{align*}
 	\beta &= P \left( t_{n-1}\left( \frac{\delta\sqrt{n}}{\sigma}\right) \leq t_{1-\alpha, n-1}  \right) = P \left( t_{24}\left( \frac{5\sqrt{25}}{1.5}\right) \leq t_{0,95;, 24} \right) \\ 
-	&= P \left( t_{24}\left( \frac{5\sqrt{25}}{1.5}\right) \leq 1,711 \right)\\
-	&= 1.
+	&= P \left( t_{24}\left( \frac{5\sqrt{25}}{1.5}\right) \leq 1,711 \right) = 1.
 	\end{align*}
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_t_test_1pop(m = 20, m0 = 15, sigma = 1.5, n = 25, pwr = NULL,
+		alternative = "greater", sig_level = 0.05)
+\end{lstlisting}
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0:\mu \leq \mu_0$ e $H_1: \mu > \mu_0$.}
-
-\begin{figure}[htbp]
-	\centering
-	\caption{Cálculo do poder do teste no \texttt{R}.}
-	\includegraphics[width=0.9\linewidth]{figures/t-noncentral-power-unilateral-upper-R.png}
-\end{figure}
-\end{frame}
 
 \begin{frame}{Tamanho da amostra: $H_0:\mu \leq \mu_0$ e $H_1: \mu > \mu_0$.}
 
@@ -1902,7 +1922,9 @@ A equação~\eqref{eq:sample-size-s2-unknown-unilateral-lower} é resolvida usan
 
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0:\mu \leq \mu_0$ e $H_1: \mu > \mu_0$.}
+\begin{frame}[fragile]{Poder do teste: $H_0:\mu \leq \mu_0$ e $H_1: \mu > \mu_0$.}
+
+\large
 
 \begin{block}{Solução}
 	\textbf{Passo 1)} Do enunciado, sabemos que queremos testar as hipóteses: $H_0: \mu \leq \mu_0$ e $H_1: \mu > \mu_0$
@@ -1917,16 +1939,13 @@ A equação~\eqref{eq:sample-size-s2-unknown-unilateral-lower} é resolvida usan
 	\end{align*}
 \end{block}
 O tamanho da amostra precisa ser, no mínimo, $n=9$.
-\end{frame}
 
-\begin{frame}{Tamanho do amostra: $H_0:\mu \leq \mu_0$ e $H_1: \mu > \mu_0$.}
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_t_test_1pop(m = 17.5, m0 = 15, sigma = 2, n = NULL, pwr = 0.95,
+		alternative = "greater", sig_level = 0.05)
+\end{lstlisting}
 
-\begin{figure}[htbp]
-	\centering
-	\caption{Cálculo do tamanho da amostra no \texttt{R}.}
-	\includegraphics[width=0.9\linewidth]{figures/t-noncentral-sample-size-unilateral-lower-R.png}
-\end{figure}
-
+\normalsize
 \end{frame}
 
 \section{Teste para $\sigma$ para $N(\mu, \sigma^2)$.}
@@ -2230,8 +2249,10 @@ Dado o poder do teste $1-\beta$ (e o erro $\beta$), nível de significância $\a
 \end{align}
 A equação~\eqref{eq:sample-size-bilateral-test-s2} é resolvida usando métodos numéricos. Tais métodos são estão implementados em diversos \textit{softwares}:
 \begin{description}
-	\item[No R] \texttt{pwr\_var\_test}
+	\item[No R] \lstinline|pwr_sigma_1pop|
 \end{description}
+
+Esta função está no pacote \lstinline|power|, que pode ser instalado usando o pacote \lstinline|devtools|: \lstinline|devtools::install_github("gilberto-sassi/power")|.
 \end{frame}
 
 \begin{frame}{Poder do teste: $H_0: \sigma = \sigma_0$ e $H_1: \sigma \neq \sigma_0$.}
@@ -2245,7 +2266,7 @@ A equação~\eqref{eq:sample-size-bilateral-test-s2} é resolvida usando método
 \normalsize
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0: \sigma = \sigma_0$ e $H_1: \sigma \neq \sigma_0$.}
+\begin{frame}[fragile]{Poder do teste: $H_0: \sigma = \sigma_0$ e $H_1: \sigma \neq \sigma_0$.}
 
 
 \begin{block}{Solução}
@@ -2259,12 +2280,17 @@ A equação~\eqref{eq:sample-size-bilateral-test-s2} é resolvida usando método
 		\item $P\left( \chi_{n-1}^2 \leq \chi_{1-\frac{\alpha}{2}; n-1}^2 \right) = P \left( \chi_{19}^2 \leq \chi_{0,975; 19}^2 \right) = 1-\frac{\alpha}{2} = 0,975$, então $\chi_{0,975; 19}^2 = 32,8523269$.
 	\end{itemize}
 	
-	Então o poder do teste é dado por:
+	Como $\sigma_1^2 = 0,01$, então o poder do teste é dado por:
 	\begin{align*}
 	1-\beta &= 1 -P \left( \chi_{n-1}^2 \leq \chi_{1-\frac{\alpha}{2};n-1} \frac{\sigma_0^2}{\sigma_1^2} \right) + P \left( \chi_{n-1}^2 \leq \chi_{\frac{\alpha}{2};n-1} \frac{\sigma_0^2}{\sigma_1^2} \right)\\
 	&=1 -P \left( \chi_{19}^2 \leq 32,8523269 \frac{0,01}{0,02} \right) + P \left( \chi_{n-1}^2 \leq 8,9065165 \frac{0,01}{0,02} \right) = 0,6289.
 	\end{align*}
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_sigma_1pop(sigma = sqrt(0.02), sigma0 = sqrt(0.01), n = 20, pwr = NULL,
+	alternative = "two.sided", sig_level = 0.05)
+\end{lstlisting}
 
 \end{frame}
 
@@ -2278,7 +2304,9 @@ A equação~\eqref{eq:sample-size-bilateral-test-s2} é resolvida usando método
 
 \end{frame}
 
-\begin{frame}{Tamanho da amostra: $H_0: \sigma = \sigma_0$ e $H_1: \sigma \neq \sigma_0$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0: \sigma = \sigma_0$ e $H_1: \sigma \neq \sigma_0$.}
+
+\large
 
 \begin{block}{solução}
 	\textbf{Passo 1)} Temos que testar as hipóteses: $H_0: \sigma = 0,01$ e $H_1: \sigma \neq 0,01$;
@@ -2291,16 +2319,12 @@ A equação~\eqref{eq:sample-size-bilateral-test-s2} é resolvida usando método
 
 Precisamos coletar $n=81$ frascos.
 
-\end{frame}
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_sigma_1pop(sigma = sqrt(0.02), sigma0 = sqrt(0.01), n = NULL, pwr = 0.99,
+		alternative = "two.sided", sig_level = 0.05)
+\end{lstlisting}
 
-
-\begin{frame}{Tamanho da amostra: $H_0: \sigma = \sigma_0$ e $H_1: \sigma \neq \sigma_0$.}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/var-test-power-bilateral-R.png}
-	\caption{Cálculo do tamanho da amostra no \texttt{R.}}
-\end{figure}
+\normalsize
 
 \end{frame}
 
@@ -2350,8 +2374,10 @@ Dado o poder do teste $1-\beta$ (e o erro $\beta$), nível de significância $\a
 
 A equação~\eqref{eq:sample-size-unilateral-test-s2-h0-upper} é resolvida usando métodos numéricos. Tais métodos estão implementados em diversos \textit{softwares}:
 \begin{description}
-	\item[No R] \texttt{sample\_size\_var\_test}
+	\item[No R] \lstinline|pwr_sigma_1pop|
 \end{description}
+
+Esta função está no pacote \lstinline|power|, que pode ser instalado usando o pacote \lstinline|devtools|: \lstinline|devtools::install_github("gilberto-sassi/power")|.
 \end{frame}
 
 \begin{frame}{Poder do teste: $H_0: \sigma \geq \sigma_0$ e $H_1: \sigma < \sigma_0$.}
@@ -2379,7 +2405,7 @@ A equação~\eqref{eq:sample-size-unilateral-test-s2-h0-upper} é resolvida usan
 
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0: \sigma \geq \sigma_0$ e $H_1: \sigma < \sigma_0$.}
+\begin{frame}[fragile]{Poder do teste: $H_0: \sigma \geq \sigma_0$ e $H_1: \sigma < \sigma_0$.}
 \begin{block}{Solução}
 	\textbf{Passo 1)} Pelo enunciado temos os seguintes hipóteses: $H_0: \sigma \geq 1 $ e $H_1: \sigma < 1$;
 	
@@ -2395,6 +2421,12 @@ A equação~\eqref{eq:sample-size-unilateral-test-s2-h0-upper} é resolvida usan
 	Então o poder do teste é dado
 	$$1-\beta =  P \left( \chi_{n-1}^2 \leq \chi_{0,05;15}^2 \frac{\sigma_0^2}{\sigma_1^2} \right) =  P \left(\chi_{15}^2 \leq 7,2609439 \frac{1}{0,5^2}  \right) = 0,9841.$$
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_sigma_1pop(sigma = 0.5, sigma0 = 1, n = 16, pwr = NULL,
+		alternative = "less", sig_level = 0.05)
+\end{lstlisting}
+
 \end{frame}
 
 
@@ -2419,7 +2451,7 @@ Imagine que um pesquisador coletou uma amostra com 16 observações de uma vari�
 \normalsize
 \end{frame}
 
-\begin{frame}{Tamanho da amostra: $H_0: \sigma \geq \sigma_0$ e $H_1: \sigma < \sigma_0$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0: \sigma \geq \sigma_0$ e $H_1: \sigma < \sigma_0$.}
 
 \begin{block}{Solução}
 	\textbf{Passo 1)} Pelo enunciado temos os seguintes hipóteses: $H_0: \sigma \geq 1 $ e $H_1: \sigma < 1$;
@@ -2434,15 +2466,10 @@ Imagine que um pesquisador coletou uma amostra com 16 observações de uma vari�
 	Então, o tamanho \sout{mínimo} da amostra deve ser $n=18$ observações.
 \end{block}
 
-\end{frame}
-
-\begin{frame}{Tamanho da amostra: $H_0: \sigma \geq \sigma_0$ e $H_1: \sigma < \sigma_0$.}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/var-test-power-unilateral-h0-upper-R.png}
-	\caption{Cálculo do tamanho da amostra no \texttt{R.}}
-\end{figure}
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_sigma_1pop(sigma = 0.5, sigma0 = 1, n = NULL, pwr = 0.99,
+		alternative = "less", sig_level = 0.05)
+\end{lstlisting}
 
 \end{frame}
 
@@ -2464,7 +2491,7 @@ O poder do teste é dado
 \end{align*}
 
 A \textcolor{important}{Função Poder}, dado o tamanho da amostra $n$, é uma função das médias populacionais na hipótese alternativa: $\pi: (0,\sigma_0) \longleftrightarrow [0,1]$ dada por
-$$\pi(\sigma) = 1 - P \left( \chi_{n-1}^2 \leq \chi_{\alpha; n-1}^2 \frac{\sigma_0^2}{\sigma^2} \right), \quad \sigma \in (0,\sigma_0).$$
+$$\pi(\sigma) = 1 - P \left( \chi_{n-1}^2 \leq \chi_{1-\alpha; n-1}^2 \frac{\sigma_0^2}{\sigma^2} \right), \quad \sigma \in (0,\sigma_0).$$
 Alguns livros chamam a Função Poder de  \textcolor{important}{Curva de Característica Operacional.}
 \end{frame}
 
@@ -2487,8 +2514,10 @@ Dado o poder do teste $1-\beta$ (e o erro $\beta$), nível de significância $\a
 
 A equação~\eqref{eq:sample-size-unilateral-test-s2-h0-lower} é resolvida usando métodos numéricos. Tais métodos estão implementados em diversos \textit{softwares}:
 \begin{description}
-\item[No R] \texttt{sample\_size\_var\_test}
+\item[No R] \lstinline|pwr_sigma_1pop|
 \end{description}
+
+Esta função está no pacote \lstinline|power|, que pode ser instalado usando o pacote \lstinline|devtools|: \lstinline|devtools::install_github("gilberto-sassi/power")|.
 \end{frame}
 
 \begin{frame}{Poder do teste: $H_0: \sigma \leq \sigma_0$ e $H_1: \sigma > \sigma_0$.}
@@ -2502,14 +2531,14 @@ A equação~\eqref{eq:sample-size-unilateral-test-s2-h0-lower} é resolvida usan
 
 \end{frame}
 
-\begin{frame}{Poder do teste: $H_0: \sigma \leq \sigma_0$ e $H_1: \sigma > \sigma_0$.}
+\begin{frame}[fragile]{Poder do teste: $H_0: \sigma \leq \sigma_0$ e $H_1: \sigma > \sigma_0$.}
 
 \begin{block}{Solução}
-	\textbf{Passo 1)} Temos as seguintes hipóteses: $H_0: \sigma^2 \leq 0,5$ e $H_1: \sigma^2 > 0,5$;
+	\textbf{Passo 1)} Temos as seguintes hipóteses: $H_0: \sigma^2 \leq 0,5^2$ e $H_1: \sigma^2 > 0,5^2$;
 	
 	\textbf{Passo 2)} Nível de significância $\alpha = 5\%$;
 	
-	Como o poder do teste $1-\beta = 99\%$, o nível de significância $\alpha=5\%$ e a variância populacional é $\sigma_1^2 = 0,5^2$.
+	Como o poder do teste $n=16$, o nível de significância $\alpha=5\%$ e a variância populacional é $\sigma_1^2 = 0,75^2$.
 	
 	Primeiro vamos encontrar os quantis da distribuição qui-quadrado:
 	\begin{itemize}
@@ -2518,10 +2547,15 @@ A equação~\eqref{eq:sample-size-unilateral-test-s2-h0-lower} é resolvida usan
 	
 	Então o poder do teste é dado por
 	\begin{align*}
-	1-\beta &=1- P\left( \chi_{n-1}^2 \leq \chi_{\alpha; n-1}^2\frac{\sigma_0^2}{\sigma_1^2} \right) =1- P \left( \chi_{19}^2 \leq \chi_{\alpha; 19}^2\frac{0,5^2}{0,75^2} \right)\\ 
-	&=1- P \left( \chi_{19}^2 \leq  24,9957901 \frac{0,5^2}{0,75^2} \right)= 0,9201.
+	1-\beta &=1- P\left( \chi_{n-1}^2 \leq \chi_{1-\alpha; n-1}^2\frac{\sigma_0^2}{\sigma_1^2} \right) =1- P \left( \chi_{15}^2 \leq \chi_{1-\alpha; 15}^2\frac{0,5^2}{0,75^2} \right)\\ 
+	&=1- P \left( \chi_{15}^2 \leq  24,9957901 \frac{0,5^2}{0,75^2} \right)= 0,7448.
 	\end{align*}
 \end{block}
+
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_sigma_1pop(sigma = 0.75, sigma0 = 0.5, n = 16, pwr = NULL,
+		alternative = "greater", sig_level = 0.05)
+\end{lstlisting}
 
 \end{frame}
 
@@ -2531,36 +2565,34 @@ A equação~\eqref{eq:sample-size-unilateral-test-s2-h0-lower} é resolvida usan
 \large
 
 \begin{block}{Exemplo}
-Uma indústria precisa comprar uma peça em formato cilíndrico e, para cumprir as especificações do INMETRO, o desvio padrão desse diâmetro deve ser, no máximo, $0,5cm$. Um fornecedor do sudeste asiático promete um preço competitivo e afirma que cumpre as especificações do INMETRO. Se a variância populacional do diâmetro for $\sigma=0,75$. Ao nível de significância $\alpha=5\%$, quantas peças precisamos analisar para termos um poder de teste de $95\%$?
+Uma indústria precisa comprar uma peça em formato cilíndrico e, para cumprir as especificações do INMETRO, o desvio padrão desse diâmetro deve ser, no máximo, $0,5cm$. Um fornecedor do sudeste asiático promete um preço competitivo e afirma que cumpre as especificações do INMETRO. Se a variância populacional do diâmetro for $\sigma=0,75$. Ao nível de significância $\alpha=5\%$, quantas peças precisamos analisar para termos um poder de teste de $99\%$?
 \end{block}
 
 \normalsize
 \end{frame}
 
-\begin{frame}{Tamanho da amostra: $H_0: \sigma \leq \sigma_0$ e $H_1: \sigma > \sigma_0$.}
+\begin{frame}[fragile]{Tamanho da amostra: $H_0: \sigma \leq \sigma_0$ e $H_1: \sigma > \sigma_0$.}
+
+\normalsize
 \begin{block}{Solução}
 	\textbf{Passo 1)} Temos as seguintes hipóteses: $H_0: \sigma^2 \leq 0,5^2$ e $H_1: \sigma^2 > 0,5^2$;
 	
 	\textbf{Passo 2)} Nível de significância $\alpha = 5\%$;
 	
-	Como a variância populacional é $\sigma=0,75$, poder $95\%$, $\sigma=0,75$ e $\sigma_0 = 0,5$.
+	Como a variância populacional é $\sigma=0,75$, poder $99\%$, $\sigma=0,75$ e $\sigma_0 = 0,5$.
 	
 	Então o tamanho da amostra é solução em $n$ da equação abaixo:
-	$$1-\beta=0,95 =1- P \left( \chi_{n-1}^2 \leq \chi_{\alpha;n-1}^2 \frac{\sigma_0^2}{\sigma_1^2} \right) =1- P \left( \chi_{n-1}^2 \leq \chi_{0,05;n-1}^2 \frac{0,5^2}{0,35^2} \right).$$
+	$$1-\beta=0,99 =1- P \left( \chi_{n-1}^2 \leq \chi_{1-\alpha;n-1}^2 \frac{\sigma_0^2}{\sigma_1^2} \right) =1- P \left( \chi_{n-1}^2 \leq \chi_{0,95;n-1}^2 \frac{0,5^2}{0,75^2} \right).$$
 	
 	Então o tamanho \sout{mínimo} da amostra deve ser $n=53$.
-	
 \end{block}
-\end{frame}
 
-\begin{frame}{Tamanho da amostra: $H_0: \sigma \leq \sigma_0$ e $H_1: \sigma > \sigma_0$.}
+\begin{lstlisting}[language = C, caption = Código no R.]
+pwr_sigma_1pop(sigma = 0.75, sigma0 = 0.5, n = NULL, pwr = 0.99,
+		alternative = "greater", sig_level = 0.05)
+\end{lstlisting}
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/var-test-power-unilateral-h0-lower-R.png}
-	\caption{Cálculo do tamanho da amostra no \texttt{R.}}
-\end{figure}
-
+\normalsize
 \end{frame}
 
 \section{Teste para proporção: $p$ ($n \geq 40$).}
@@ -2834,11 +2866,11 @@ Poder do teste é dado
 	1-\beta &= 1 - P\left( z_\frac{\alpha}{2} \leq Z_0 \leq  z_{1-\frac{\alpha}{2}} \right) = 1 - P \left( 
 	\frac{ z_\frac{\alpha}{2} - \frac{(p_1 - p_0)\sqrt{n}}{\sqrt{p_0(1-p_0)}}  }{ \sqrt{\frac{ p_1(1 - p_1) }{ p_0(1 - p_0) }} } \leq Z \leq  \frac{ z_{1-\frac{\alpha}{2}} - \frac{(p_1 - p_0)\sqrt{n}}{\sqrt{p_0(1-p_0)}}  }{ \sqrt{\frac{ p_1(1 - p_1) }{ p_0(1 - p_0) }} }
 	 \mid p = p_1 \right) \\
-	&= 1 + \Phi\left( \frac{ (p_1 - p_0) + z_{1-\frac{\alpha}{2}}\sqrt{\frac{p_0(1-p_0)}{n}} }{ \sqrt{\frac{p_1(1-p_1)}{n}} } \right) - \Phi\left( \frac{ (p_1 - p_0) + z_\frac{\alpha}{2}\sqrt{\frac{p_0(1-p_0)}{n}} }{ \sqrt{\frac{p_1(1-p_1)}{n}} } \right) 
+	&= 1 - \Phi\left( \frac{ -(p_1 - p_0) + z_{1-\frac{\alpha}{2}}\sqrt{\frac{p_0(1-p_0)}{n}} }{ \sqrt{\frac{p_1(1-p_1)}{n}} } \right) + \Phi\left( \frac{ -(p_1 - p_0) + z_\frac{\alpha}{2}\sqrt{\frac{p_0(1-p_0)}{n}} }{ \sqrt{\frac{p_1(1-p_1)}{n}} } \right) 
 \end{align*}
 
 A \textcolor{important}{Função Poder}, dado o tamanho da amostra $n$, é uma função das médias populacionais na hipótese alternativa $\pi: [0,1]-{p_0} \longleftrightarrow [0,1] $ dada por
-$$\pi(p) = 1 + \Phi\left( \frac{ (p - p_0) + z_{1-\frac{\alpha}{2}}\sqrt{\frac{p_0(1-p_0)}{n}} }{ \sqrt{\frac{p(1-p)}{n}} } \right) - \Phi\left( \frac{ (p - p_0) + z_\frac{\alpha}{2}\sqrt{\frac{p_0(1-p_0)}{n}} }{ \sqrt{\frac{p(1-p)}{n}} } \right), \quad p \neq p_0.$$
+$$\pi(p) = 1 - \Phi\left( \frac{ -(p - p_0) + z_{1-\frac{\alpha}{2}}\sqrt{\frac{p_0(1-p_0)}{n}} }{ \sqrt{\frac{p(1-p)}{n}} } \right) + \Phi\left( \frac{ -(p - p_0) + z_\frac{\alpha}{2}\sqrt{\frac{p_0(1-p_0)}{n}} }{ \sqrt{\frac{p(1-p)}{n}} } \right), \quad p \neq p_0.$$
 Alguns livros chamam a Função Poder de \textcolor{important}{Curva Característica Operacional}.
 
 \normalsize
@@ -3174,13 +3206,13 @@ $$n = \left\lceil \left( \frac{ z_{1-\beta} \sqrt{p_1(1-p_1)} + z_{1-\alpha} \sq
 	\end{table}
 \end{block}
 
-\begin{block}{Solução}
-	\textbf{Passo 1)}  Pelo enunciado, temos as seguintes hipóteses: $H_0: p \geq p_0$ e $H_1: p < p_0$;
-	
-	\textbf{Passo 2)} Nível de significância $\alpha=5\%$;
-	
-
-\end{block}
+%\begin{block}{Solução}
+%	\textbf{Passo 1)}  Pelo enunciado, temos as seguintes hipóteses: $H_0: p \geq p_0$ e $H_1: p < p_0$;
+%	
+%	\textbf{Passo 2)} Nível de significância $\alpha=5\%$;
+%	
+%
+%\end{block}
 \end{frame}
 
 \begin{frame}{Tamanho do teste: $H_0: p \geq p_0$ e $H_1: p < p_0$.}

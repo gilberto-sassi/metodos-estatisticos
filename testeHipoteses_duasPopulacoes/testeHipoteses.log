@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.2.5)  29 MAY 2020 12:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.2.5)  2 JUL 2020 12:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1227,24 +1227,50 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \c@mdf@zref@counter=\count351
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count352
+\lst@gtempboxa=\box106
+\lst@token=\toks48
+\lst@length=\count353
+\lst@currlwidth=\dimen317
+\lst@column=\count354
+\lst@pos=\count355
+\lst@lostspace=\dimen318
+\lst@width=\dimen319
+\lst@newlines=\count356
+\lst@lineno=\count357
+\lst@maxwidth=\dimen320
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
+\c@lstnumber=\count358
+\lst@skipnumbers=\count359
+\lst@framebox=\box107
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2019/02/27 1.8b listings configuration
+))
+Package: listings 2019/02/27 1.8b (Carsten Heinz)
+
 (./testeHipoteses.aux)
 \openout1 = `testeHipoteses.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 79.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 110.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
@@ -1285,17 +1311,17 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count352
-\scratchdimen=\dimen317
-\scratchbox=\box106
-\nofMPsegments=\count353
-\nofMParguments=\count354
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count355
-\MPscratchDim=\dimen318
-\MPnumerator=\count356
-\makeMPintoPDFobject=\count357
-\everyMPtoPDFconversion=\toks49
+\scratchcounter=\count360
+\scratchdimen=\dimen321
+\scratchbox=\box108
+\nofMPsegments=\count361
+\nofMParguments=\count362
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count363
+\MPscratchDim=\dimen322
+\MPnumerator=\count364
+\makeMPintoPDFobject=\count365
+\everyMPtoPDFconversion=\toks50
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1314,8 +1340,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box107
-Package hyperref Info: Link coloring OFF on input line 79.
+\AtBeginShipoutBox=\box109
+Package hyperref Info: Link coloring OFF on input line 110.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1323,70 +1349,70 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count358
+\c@section@level=\count366
 )
-LaTeX Info: Redefining \ref on input line 79.
-LaTeX Info: Redefining \pageref on input line 79.
-LaTeX Info: Redefining \nameref on input line 79.
+LaTeX Info: Redefining \ref on input line 110.
+LaTeX Info: Redefining \pageref on input line 110.
+LaTeX Info: Redefining \nameref on input line 110.
 
 (./testeHipoteses.out) (./testeHipoteses.out)
 \@outlinefile=\write5
 \openout5 = `testeHipoteses.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 79.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 110.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 79.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 110.
 \symnumbers=\mathgroup11
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 79.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 110.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/mathkerncmss/m/sl --> OT1/phv/m/it on input line 79
-.
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/phv/m/it on input line 11
+0.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/bx/sl --> OT1/phv/m/it on input line 7
-9.
+(Font)                  OT1/mathkerncmss/bx/sl --> OT1/phv/m/it on input line 1
+10.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/ptm/m/n on input line 79.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 79.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 79.
+(Font)                  OT1/cmss/m/n --> OT1/ptm/m/n on input line 110.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 110.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/phv/m/n on input line 79.
+(Font)                  OT1/cmss/m/n --> OT1/phv/m/n on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/phv/m/n on input line 79.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 79.
+(Font)                  OT1/cmss/bx/n --> OT1/phv/m/n on input line 110.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/phv/m/it on input line 79.
+(Font)                  OT1/cmr/m/it --> OT1/phv/m/it on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/phv/m/it on input line 79.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 79.
+(Font)                  OT1/cmr/bx/it --> OT1/phv/m/it on input line 110.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/pcr/m/n on input line 79.
+(Font)                  OT1/cmtt/m/n --> OT1/pcr/m/n on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/pcr/m/n on input line 79.
+(Font)                  OT1/cmtt/m/n --> OT1/pcr/m/n on input line 110.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/phv/m/n --> OT1/phv/bx/n on input line 79.
+(Font)                  OT1/phv/m/n --> OT1/phv/bx/n on input line 110.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/phv/m/it --> OT1/phv/bx/it on input line 79.
+(Font)                  OT1/phv/m/it --> OT1/phv/bx/it on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/ptm/bx/n on input line 79.
+(Font)                  OT1/cmss/bx/n --> OT1/ptm/bx/n on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/phv/bx/n --> OT1/phv/bx/n on input line 79.
+(Font)                  OT1/phv/bx/n --> OT1/phv/bx/n on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/phv/m/n --> OT1/phv/bx/n on input line 79.
+(Font)                  OT1/phv/m/n --> OT1/phv/bx/n on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/phv/m/it --> OT1/phv/bx/it on input line 79.
+(Font)                  OT1/phv/m/it --> OT1/phv/bx/it on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/pcr/m/n --> OT1/pcr/bx/n on input line 79.
-LaTeX Font Info:    Redeclaring symbol font `boldpureletters' on input line 79.
-
+(Font)                  OT1/pcr/m/n --> OT1/pcr/bx/n on input line 110.
+LaTeX Font Info:    Redeclaring symbol font `boldpureletters' on input line 110
+.
 LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `norma
 l'
 (Font)                  OT1/mathkerncmss/bx/sl --> OT1/phv/bx/it on input line 
-79.
+110.
 LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `bold'
 
 (Font)                  OT1/mathkerncmss/bx/sl --> OT1/phv/bx/it on input line 
-79.
+110.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -1414,37 +1440,39 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count367
  (./testeHipoteses.nav) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 126.
+LaTeX Font Info:    Try loading font information for U+msa on input line 157.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 126.
+LaTeX Font Info:    Try loading font information for U+msb on input line 157.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 126.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 157.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <6> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 126.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 157.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <5> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 126.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 157.
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <9> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 126.
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 157.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <9> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 126.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 157.
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <6> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 126.
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 157.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <6> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 126.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 157.
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <5> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 126.
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 157.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <5> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 126.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 157.
  [2
 
 ] [3
@@ -1452,75 +1480,75 @@ LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <5> not available
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 151.
+(hyperref)                removing `math shift' on input line 182.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 151.
+(hyperref)                removing `\mu' on input line 182.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 151.
+(hyperref)                removing `subscript' on input line 182.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 151.
+(hyperref)                removing `math shift' on input line 182.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 151.
+(hyperref)                removing `math shift' on input line 182.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 151.
+(hyperref)                removing `\mu' on input line 182.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 151.
+(hyperref)                removing `subscript' on input line 182.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 151.
+(hyperref)                removing `math shift' on input line 182.
 
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 182.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 213.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 182.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 213.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 182.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 213.
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 182.
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 213.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 182.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 213.
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <8> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 182.
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 213.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <8> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 182.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 213.
 [4
 
 ]
-<figures/2-pop-normal-s2-known-bilateral.png, id=259, 721.7364pt x 531.4254pt>
+<figures/2-pop-normal-s2-known-bilateral.png, id=263, 721.7364pt x 531.4254pt>
 File: figures/2-pop-normal-s2-known-bilateral.png Graphic file (type png)
 <use figures/2-pop-normal-s2-known-bilateral.png>
 Package pdftex.def Info: figures/2-pop-normal-s2-known-bilateral.png  used on i
-nput line 193.
+nput line 224.
 (pdftex.def)             Requested size: 98.335pt x 72.40425pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 193.
-<figures/2-pop-normal-s2-known-h1-lower.png, id=260, 721.7364pt x 531.4254pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 224.
+<figures/2-pop-normal-s2-known-h1-lower.png, id=264, 721.7364pt x 531.4254pt>
 File: figures/2-pop-normal-s2-known-h1-lower.png Graphic file (type png)
 <use figures/2-pop-normal-s2-known-h1-lower.png>
 Package pdftex.def Info: figures/2-pop-normal-s2-known-h1-lower.png  used on in
-put line 193.
+put line 224.
 (pdftex.def)             Requested size: 98.335pt x 72.40425pt.
-<figures/2-pop-normal-s2-known-h1-upper.png, id=261, 721.7364pt x 531.4254pt>
+<figures/2-pop-normal-s2-known-h1-upper.png, id=265, 721.7364pt x 531.4254pt>
 File: figures/2-pop-normal-s2-known-h1-upper.png Graphic file (type png)
 <use figures/2-pop-normal-s2-known-h1-upper.png>
 Package pdftex.def Info: figures/2-pop-normal-s2-known-h1-upper.png  used on in
-put line 193.
+put line 224.
 (pdftex.def)             Requested size: 98.335pt x 72.40425pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 193.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 224.
  [5
 
  <./figures/2-pop-normal-s2-known-bilateral.png (PNG copy)> <./figures/2-pop-no
@@ -1528,7 +1556,7 @@ rmal-s2-known-h1-lower.png (PNG copy)> <./figures/2-pop-normal-s2-known-h1-uppe
 r.png (PNG copy)>] [6
 
 ]
-Overfull \hbox (18.79227pt too wide) in paragraph at lines 229--229
+Overfull \hbox (18.79227pt too wide) in paragraph at lines 260--260
  [] 
  []
 
@@ -1537,7 +1565,7 @@ Overfull \hbox (18.79227pt too wide) in paragraph at lines 229--229
 ] [8
 
 ]
-Overfull \vbox (1.2678pt too high) detected at line 274
+Overfull \vbox (1.2678pt too high) detected at line 305
  []
 
 [9
@@ -1555,18 +1583,18 @@ Overfull \vbox (1.2678pt too high) detected at line 274
 ] [15
 
 ]
-Overfull \vbox (2.83284pt too high) detected at line 412
+Overfull \vbox (2.83284pt too high) detected at line 443
  []
 
 [16
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <7> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 441.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 472.
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <7> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 441.
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 472.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <7> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 441.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 472.
  [17
 
 ] [18
@@ -1581,11 +1609,11 @@ LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <7> not available
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 562.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 593.
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <10> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 562.
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 593.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <10> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 562.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 593.
  [23
 
 ] [24
@@ -1597,7 +1625,7 @@ LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <10> not available
 ] [27
 
 ]
-Overfull \hbox (16.0637pt too wide) detected at line 650
+Overfull \hbox (16.0637pt too wide) detected at line 681
 []
  []
 
@@ -1612,7 +1640,7 @@ Overfull \hbox (16.0637pt too wide) detected at line 650
 ] [32
 
 ]
-Overfull \hbox (8.2923pt too wide) detected at line 754
+Overfull \hbox (8.2923pt too wide) detected at line 785
 []
  []
 
@@ -1621,36 +1649,36 @@ Overfull \hbox (8.2923pt too wide) detected at line 754
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 756.
+(hyperref)                removing `math shift' on input line 787.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\Delta' on input line 756.
+(hyperref)                removing `\Delta' on input line 787.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 756.
+(hyperref)                removing `\mu' on input line 787.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 756.
+(hyperref)                removing `subscript' on input line 787.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 756.
+(hyperref)                removing `\mu' on input line 787.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 756.
+(hyperref)                removing `subscript' on input line 787.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 756.
+(hyperref)                removing `math shift' on input line 787.
 
 [34
 
 ]
-Overfull \hbox (11.99501pt too wide) detected at line 802
+Overfull \hbox (11.99501pt too wide) detected at line 833
 []
  []
 
@@ -1663,25 +1691,25 @@ Overfull \hbox (11.99501pt too wide) detected at line 802
 ] [38
 
 ]
-<figures/test-variance-bilateral.png, id=1332, 590.205pt x 465.9006pt>
+<figures/test-variance-bilateral.png, id=1336, 590.205pt x 465.9006pt>
 File: figures/test-variance-bilateral.png Graphic file (type png)
 <use figures/test-variance-bilateral.png>
 Package pdftex.def Info: figures/test-variance-bilateral.png  used on input lin
-e 898.
+e 929.
 (pdftex.def)             Requested size: 98.335pt x 77.62384pt.
-<figures/test-variance-unilateral-h1-upper.png, id=1333, 769.9164pt x 570.4512p
+<figures/test-variance-unilateral-h1-upper.png, id=1337, 769.9164pt x 570.4512p
 t>
 File: figures/test-variance-unilateral-h1-upper.png Graphic file (type png)
 <use figures/test-variance-unilateral-h1-upper.png>
 Package pdftex.def Info: figures/test-variance-unilateral-h1-upper.png  used on
- input line 898.
+ input line 929.
 (pdftex.def)             Requested size: 98.335pt x 72.85559pt.
-<figures/test-variance-unilateral-h1-lower.png, id=1334, 769.9164pt x 570.4512p
+<figures/test-variance-unilateral-h1-lower.png, id=1338, 769.9164pt x 570.4512p
 t>
 File: figures/test-variance-unilateral-h1-lower.png Graphic file (type png)
 <use figures/test-variance-unilateral-h1-lower.png>
 Package pdftex.def Info: figures/test-variance-unilateral-h1-lower.png  used on
- input line 898.
+ input line 929.
 (pdftex.def)             Requested size: 98.335pt x 72.85559pt.
  [39
 
@@ -1691,15 +1719,15 @@ png (PNG copy)>] [40
 
 ]
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 924.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 955.
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 924.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 955.
 
 [41
 
 ]
-Overfull \hbox (3.27126pt too wide) in paragraph at lines 952--952
+Overfull \hbox (3.27126pt too wide) in paragraph at lines 983--983
 \OT1/phv/m/sl/8 P\OT1/cmss/m/n/8 (\OT1/phv/m/sl/8 F[] \OMS/cmsy/m/n/8 ^^T \OT1/
 phv/m/sl/8 f[]\OT1/cmss/m/n/8 ) = \OT1/phv/m/sl/8 P\OT1/cmss/m/n/8 (\OT1/phv/m/
 sl/8 F[] \OMS/cmsy/m/n/8 ^^T \OT1/phv/m/sl/8 f[]\OT1/cmss/m/n/8 ) = \OT1/phv/m/
@@ -1708,7 +1736,7 @@ n/8 1 \OMS/cmsy/m/n/8 ^^@ [] \OT1/cmss/m/n/8 = \OT1/phv/m/n/8 0\OML/cmm/m/it/8
  []
 
 
-Overfull \hbox (3.27126pt too wide) in paragraph at lines 952--952
+Overfull \hbox (3.27126pt too wide) in paragraph at lines 983--983
 \OT1/phv/m/sl/8 P\OT1/cmss/m/n/8 (\OT1/phv/m/sl/8 F[] \OMS/cmsy/m/n/8 ^^T \OT1/
 phv/m/sl/8 f[]\OT1/cmss/m/n/8 ) = \OT1/phv/m/sl/8 P\OT1/cmss/m/n/8 (\OT1/phv/m/
 sl/8 F[] \OMS/cmsy/m/n/8 ^^T \OT1/phv/m/sl/8 f[]\OT1/cmss/m/n/8 ) = \OT1/phv/m/
@@ -1717,26 +1745,26 @@ n/8 1 \OMS/cmsy/m/n/8 ^^@ [] \OT1/cmss/m/n/8 = \OT1/phv/m/n/8 0\OML/cmm/m/it/8
  []
 
 
-Overfull \vbox (5.708pt too high) detected at line 952
+Overfull \vbox (5.708pt too high) detected at line 983
  []
 
 [42
 
 ]
-<figures/test-variance-valor-p-1.pdf, id=1454, 769.87625pt x 570.13pt>
+<figures/test-variance-valor-p-1.pdf, id=1458, 769.87625pt x 570.13pt>
 File: figures/test-variance-valor-p-1.pdf Graphic file (type pdf)
 <use figures/test-variance-valor-p-1.pdf>
 Package pdftex.def Info: figures/test-variance-valor-p-1.pdf  used on input lin
-e 971.
+e 1002.
 (pdftex.def)             Requested size: 138.2795pt x 102.40147pt.
-<figures/test-variance-valor-p-2.pdf, id=1455, 769.87625pt x 570.13pt>
+<figures/test-variance-valor-p-2.pdf, id=1459, 769.87625pt x 570.13pt>
 File: figures/test-variance-valor-p-2.pdf Graphic file (type pdf)
 <use figures/test-variance-valor-p-2.pdf>
 Package pdftex.def Info: figures/test-variance-valor-p-2.pdf  used on input lin
-e 971.
+e 1002.
 (pdftex.def)             Requested size: 138.2795pt x 102.40147pt.
 
-Overfull \vbox (4.41495pt too high) detected at line 971
+Overfull \vbox (4.41495pt too high) detected at line 1002
  []
 
 [43
@@ -1757,229 +1785,247 @@ Overfull \vbox (4.41495pt too high) detected at line 971
 ] [50
 
 ]
-Overfull \hbox (11.75642pt too wide) detected at line 1137
+Overfull \hbox (11.75642pt too wide) detected at line 1168
 []
  []
 
 
-Overfull \hbox (12.2544pt too wide) detected at line 1137
+Overfull \hbox (12.2544pt too wide) detected at line 1168
 []
  []
 
 
-Overfull \vbox (0.12408pt too high) detected at line 1137
+Overfull \vbox (0.12408pt too high) detected at line 1168
  []
 
 [51
 
-] [52
+]
+\openout4 = `testeHipoteses.vrb'.
+
+ (./testeHipoteses.vrb
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 23.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)) [52
 
 ] [53
 
-] [54
+]
+\openout4 = `testeHipoteses.vrb'.
+
+
+(./testeHipoteses.vrb
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <5> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 6.
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/02/27 1.8b listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
+))
+Overfull \vbox (8.53513pt too high) detected at line 1243
+ []
+
+[54
 
 ] [55
 
 ]
-Overfull \hbox (2.37947pt too wide) detected at line 1232
+\openout4 = `testeHipoteses.vrb'.
+
+ (./testeHipoteses.vrb
+Overfull \hbox (2.37947pt too wide) detected at line 16
 []
  []
 
-[56
+) [56
 
 ]
-<figures/samp-size-test-var-bilateral.png, id=1884, 723.45282pt x 229.60782pt>
-File: figures/samp-size-test-var-bilateral.png Graphic file (type png)
-<use figures/samp-size-test-var-bilateral.png>
-Package pdftex.def Info: figures/samp-size-test-var-bilateral.png  used on inpu
-t line 1246.
-(pdftex.def)             Requested size: 307.28987pt x 97.52773pt.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 1246
-.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [57
+Overfull \hbox (17.46077pt too wide) detected at line 1314
+[]
+ []
 
- <./figures/samp-size-test-var-bilateral.png (PNG copy)>]
-Overfull \hbox (17.46077pt too wide) detected at line 1274
+[57
+
+]
+Overfull \hbox (11.83269pt too wide) detected at line 1342
 []
  []
 
 [58
 
+] [59
+
 ]
-Overfull \hbox (14.42072pt too wide) detected at line 1290
-\OT1/phv/m/n/9 1 \OMS/cmsy/m/n/9 ^^@ \OML/cmm/m/it/9 ^^L \OT1/cmss/m/n/9 = \OT1
-/phv/m/n/9 1 \OMS/cmsy/m/n/9 ^^@ \OT1/phv/m/sl/9 P [] \OT1/cmss/m/n/9 = \OT1/ph
-v/m/n/9 1 \OMS/cmsy/m/n/9 ^^@ \OT1/phv/m/sl/9 P [] \OML/cmm/m/it/9 :
- []
+\openout4 = `testeHipoteses.vrb'.
 
-[59
-
-] [60
+ (./testeHipoteses.vrb) [60
 
 ] [61
 
-] [62
+]
+\openout4 = `testeHipoteses.vrb'.
+
+ (./testeHipoteses.vrb) [62
 
 ] [63
 
 ]
-<figures/samp-size-test-var-h1-upper.png, id=2098, 697.8572pt x 219.82124pt>
-File: figures/samp-size-test-var-h1-upper.png Graphic file (type png)
-<use figures/samp-size-test-var-h1-upper.png>
-Package pdftex.def Info: figures/samp-size-test-var-h1-upper.png  used on input
- line 1363.
-(pdftex.def)             Requested size: 307.28987pt x 96.79543pt.
- [64
+\openout4 = `testeHipoteses.vrb'.
 
- <./figures/samp-size-test-var-h1-upper.png (PNG copy)>] [65
 
-] [66
+(./testeHipoteses.vrb) [64
+
+] [65
+
+]
+\openout4 = `testeHipoteses.vrb'.
+
+ (./testeHipoteses.vrb) [66
 
 ] [67
 
-] [68
+]
+\openout4 = `testeHipoteses.vrb'.
 
-] [69
+
+(./testeHipoteses.vrb) [68
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1560.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@UnitsNiceFrac ' on input line 1560.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sigma' on input line 1560.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1560.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 1560.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sigma' on input line 1560.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1560.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 1560.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1560.
+
+[69
 
 ] [70
 
+] [71
+
 ]
-<figures/samp-size-test-var-h1-lower.png, id=2317, 662.475pt x 204.01219pt>
-File: figures/samp-size-test-var-h1-lower.png Graphic file (type png)
-<use figures/samp-size-test-var-h1-lower.png>
-Package pdftex.def Info: figures/samp-size-test-var-h1-lower.png  used on input
- line 1503.
-(pdftex.def)             Requested size: 307.28987pt x 94.63121pt.
- [71
-
- <./figures/samp-size-test-var-h1-lower.png (PNG copy)>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1505.
+(hyperref)                removing `math shift' on input line 1614.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@UnitsNiceFrac ' on input line 1505.
+(hyperref)                removing `\mu' on input line 1614.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 1505.
+(hyperref)                removing `subscript' on input line 1614.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1505.
+(hyperref)                removing `math shift' on input line 1614.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1505.
+(hyperref)                removing `math shift' on input line 1614.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 1505.
+(hyperref)                removing `\mu' on input line 1614.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1505.
+(hyperref)                removing `subscript' on input line 1614.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1505.
+(hyperref)                removing `math shift' on input line 1614.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1505.
+(hyperref)                removing `math shift' on input line 1614.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\leq' on input line 1614.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1614.
 
 [72
 
-] [73
-
-] [74
-
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1559.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 1559.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1559.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1559.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1559.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 1559.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1559.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1559.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1559.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\leq' on input line 1559.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1559.
-
-[75
-
-]
-<figures/2-pop-normal-s2-unknown-equal-bilateral.png, id=2472, 590.205pt x 465.
+<figures/2-pop-normal-s2-unknown-equal-bilateral.png, id=2387, 590.205pt x 465.
 9006pt>
 File: figures/2-pop-normal-s2-unknown-equal-bilateral.png Graphic file (type pn
 g)
 <use figures/2-pop-normal-s2-unknown-equal-bilateral.png>
 Package pdftex.def Info: figures/2-pop-normal-s2-unknown-equal-bilateral.png  u
-sed on input line 1602.
+sed on input line 1657.
 (pdftex.def)             Requested size: 98.335pt x 77.62384pt.
-<figures/2-pop-normal-s2-unknown-equal-h1-lower.png, id=2473, 640.5531pt x 465.
+<figures/2-pop-normal-s2-unknown-equal-h1-lower.png, id=2388, 640.5531pt x 465.
 9006pt>
 File: figures/2-pop-normal-s2-unknown-equal-h1-lower.png Graphic file (type png
 )
 <use figures/2-pop-normal-s2-unknown-equal-h1-lower.png>
 Package pdftex.def Info: figures/2-pop-normal-s2-unknown-equal-h1-lower.png  us
-ed on input line 1602.
+ed on input line 1657.
 (pdftex.def)             Requested size: 98.335pt x 71.51715pt.
-<figures/2-pop-normal-s2-unknown-equal-h1-upper.png, id=2474, 640.5531pt x 465.
+<figures/2-pop-normal-s2-unknown-equal-h1-upper.png, id=2389, 640.5531pt x 465.
 9006pt>
 File: figures/2-pop-normal-s2-unknown-equal-h1-upper.png Graphic file (type png
 )
 <use figures/2-pop-normal-s2-unknown-equal-h1-upper.png>
 Package pdftex.def Info: figures/2-pop-normal-s2-unknown-equal-h1-upper.png  us
-ed on input line 1602.
+ed on input line 1657.
 (pdftex.def)             Requested size: 98.335pt x 71.51715pt.
- [76
+ [73
 
  <./figures/2-pop-normal-s2-unknown-equal-bilateral.png (PNG copy)> <./figures/
 2-pop-normal-s2-unknown-equal-h1-lower.png (PNG copy)> <./figures/2-pop-normal-
-s2-unknown-equal-h1-upper.png (PNG copy)>] [77
+s2-unknown-equal-h1-upper.png (PNG copy)>] [74
 
 ]
-Overfull \vbox (5.29843pt too high) detected at line 1646
+Overfull \vbox (5.29843pt too high) detected at line 1701
  []
 
-[78
+[75
+
+] [76
+
+] [77
+
+] [78
 
 ] [79
 
@@ -1989,201 +2035,201 @@ Overfull \vbox (5.29843pt too high) detected at line 1646
 
 ] [82
 
-] [83
+]
+Overfull \hbox (25.8286pt too wide) detected at line 1893
+[]
+ []
 
-] [84
+
+Overfull \hbox (22.04958pt too wide) detected at line 1893
+[]
+ []
+
+[83
+
+]
+\openout4 = `testeHipoteses.vrb'.
+
+ (./testeHipoteses.vrb) [84
 
 ] [85
 
 ]
-Overfull \hbox (25.8286pt too wide) detected at line 1838
-[]
- []
+\openout4 = `testeHipoteses.vrb'.
 
+ (./testeHipoteses.vrb
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <6> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 5.
+) [86
 
-Overfull \hbox (22.04958pt too wide) detected at line 1838
-[]
- []
-
-[86
+] [87
 
 ]
-Overfull \hbox (28.20506pt too wide) detected at line 1861
-[]
+\openout4 = `testeHipoteses.vrb'.
+
+
+(./testeHipoteses.vrb)
+Overfull \vbox (1.73692pt too high) detected at line 1997
  []
 
-[87
+[88
 
-] [88
+]
 
-] [89
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mu' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mu' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1999.
+
+[89
 
 ] [90
 
 ]
-Overfull \hbox (23.62039pt too wide) detected at line 1925
-[]
+Overfull \vbox (3.3676pt too high) detected at line 2058
  []
 
 [91
 
 ]
-<figures/samp-size-2pop-bilateral-s2-unknown.png, id=2971, 725.71124pt x 320.69
-812pt>
-File: figures/samp-size-2pop-bilateral-s2-unknown.png Graphic file (type png)
-<use figures/samp-size-2pop-bilateral-s2-unknown.png>
-Package pdftex.def Info: figures/samp-size-2pop-bilateral-s2-unknown.png  used 
-on input line 1939.
-(pdftex.def)             Requested size: 307.28987pt x 135.7933pt.
- [92
-
- <./figures/samp-size-2pop-bilateral-s2-unknown.png (PNG copy)>]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1942.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 1942.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1942.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 1942.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1942.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1942.
-
-[93
-
-] [94
-
-]
-Overfull \vbox (3.3676pt too high) detected at line 2001
- []
-
-[95
-
-]
-Overfull \hbox (12.87085pt too wide) detected at line 2027
+Overfull \hbox (12.87085pt too wide) detected at line 2084
 []
  []
 
-[96
+[92
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2029.
+(hyperref)                removing `math shift' on input line 2086.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 2029.
+(hyperref)                removing `\mu' on input line 2086.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 2029.
+(hyperref)                removing `subscript' on input line 2086.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2029.
+(hyperref)                removing `math shift' on input line 2086.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2029.
+(hyperref)                removing `math shift' on input line 2086.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 2029.
+(hyperref)                removing `\mu' on input line 2086.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 2029.
+(hyperref)                removing `subscript' on input line 2086.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2029.
+(hyperref)                removing `math shift' on input line 2086.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2029.
+(hyperref)                removing `math shift' on input line 2086.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\leq' on input line 2029.
+(hyperref)                removing `\leq' on input line 2086.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2029.
+(hyperref)                removing `math shift' on input line 2086.
 
-[97
+[93
 
 ]
-<figures/2-pop-normal-s2-unknown-different-bilateral.png, id=3156, 590.205pt x 
+<figures/2-pop-normal-s2-unknown-different-bilateral.png, id=3042, 590.205pt x 
 465.9006pt>
 File: figures/2-pop-normal-s2-unknown-different-bilateral.png Graphic file (typ
 e png)
 <use figures/2-pop-normal-s2-unknown-different-bilateral.png>
 Package pdftex.def Info: figures/2-pop-normal-s2-unknown-different-bilateral.pn
-g  used on input line 2077.
+g  used on input line 2134.
 (pdftex.def)             Requested size: 98.335pt x 77.62384pt.
-<figures/2-pop-normal-s2-unknown-different-h1-lower.png, id=3157, 590.205pt x 4
+<figures/2-pop-normal-s2-unknown-different-h1-lower.png, id=3043, 590.205pt x 4
 65.9006pt>
 File: figures/2-pop-normal-s2-unknown-different-h1-lower.png Graphic file (type
  png)
 <use figures/2-pop-normal-s2-unknown-different-h1-lower.png>
 Package pdftex.def Info: figures/2-pop-normal-s2-unknown-different-h1-lower.png
-  used on input line 2077.
+  used on input line 2134.
 (pdftex.def)             Requested size: 98.335pt x 77.62384pt.
-<figures/2-pop-normal-s2-unknown-different-h1-upper.png, id=3158, 590.205pt x 4
+<figures/2-pop-normal-s2-unknown-different-h1-upper.png, id=3044, 590.205pt x 4
 65.9006pt>
 File: figures/2-pop-normal-s2-unknown-different-h1-upper.png Graphic file (type
  png)
 <use figures/2-pop-normal-s2-unknown-different-h1-upper.png>
 Package pdftex.def Info: figures/2-pop-normal-s2-unknown-different-h1-upper.png
-  used on input line 2077.
+  used on input line 2134.
 (pdftex.def)             Requested size: 98.335pt x 77.62384pt.
- [98
+ [94
 
  <./figures/2-pop-normal-s2-unknown-different-bilateral.png (PNG copy)> <./figu
 res/2-pop-normal-s2-unknown-different-h1-lower.png (PNG copy)> <./figures/2-pop
--normal-s2-unknown-different-h1-upper.png (PNG copy)>] [99
+-normal-s2-unknown-different-h1-upper.png (PNG copy)>] [95
 
 ]
-Overfull \vbox (10.24039pt too high) detected at line 2128
+Overfull \vbox (10.24039pt too high) detected at line 2185
  []
 
-[100
+[96
 
-] [101
+] [97
 
 ]
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <6> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 2175.
-
-Overfull \vbox (2.72922pt too high) detected at line 2175
+Overfull \vbox (2.72922pt too high) detected at line 2232
  []
 
-[102
+[98
 
 ]
-Overfull \vbox (3.90912pt too high) detected at line 2194
+Overfull \vbox (3.90912pt too high) detected at line 2251
  []
 
-[103
+[99
+
+] [100
+
+]
+Overfull \vbox (1.33769pt too high) detected at line 2294
+ []
+
+[101
+
+] [102
+
+] [103
 
 ] [104
 
 ]
-Overfull \vbox (1.33769pt too high) detected at line 2237
+Overfull \vbox (1.33769pt too high) detected at line 2361
  []
 
 [105
@@ -2195,113 +2241,136 @@ Overfull \vbox (1.33769pt too high) detected at line 2237
 ] [108
 
 ]
-Overfull \vbox (1.33769pt too high) detected at line 2304
+\openout4 = `testeHipoteses.vrb'.
+
+ (./testeHipoteses.vrb
+Overfull \hbox (13.50597pt too wide) detected at line 19
+[]
  []
 
-[109
+) [109
 
 ] [110
 
-] [111
+]
+\openout4 = `testeHipoteses.vrb'.
+
+ (./testeHipoteses.vrb) [111
 
 ] [112
 
 ]
-Overfull \hbox (13.50597pt too wide) detected at line 2402
-[]
+\openout4 = `testeHipoteses.vrb'.
+
+ (./testeHipoteses.vrb)
+Overfull \vbox (2.55878pt too high) detected at line 2535
  []
 
 [113
 
 ] [114
 
-] [115
+]
+\openout4 = `testeHipoteses.vrb'.
+
+ (./testeHipoteses.vrb) [115
 
 ] [116
 
-] [117
+]
+\openout4 = `testeHipoteses.vrb'.
 
-] [118
+ (./testeHipoteses.vrb) [117
 
-] [119
+]
+[118
 
-] [120
+]
+\openout4 = `testeHipoteses.vrb'.
 
-] [121
+ (./testeHipoteses.vrb) [119
 
-] [122
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2691.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mu' on input line 2691.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 2691.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mu' on input line 2691.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 2691.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2691.
+
+
+Overfull \vbox (1.74693pt too high) detected at line 2714
+ []
+
+[120
+
+]
+Overfull \vbox (10.3664pt too high) detected at line 2744
+ []
+
+[121
+
+]
+Overfull \hbox (8.38773pt too wide) detected at line 2770
+[]
+ []
+
+[122
 
 ] [123
 
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2589.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 2589.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 2589.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 2589.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 2589.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2589.
-
-
-Overfull \vbox (1.74693pt too high) detected at line 2612
- []
-
-[124
-
-]
-Overfull \vbox (10.3664pt too high) detected at line 2642
- []
-
-[125
-
-]
-Overfull \hbox (8.38773pt too wide) detected at line 2668
-[]
- []
-
-[126
-
-] [127
-
-]
-<figures/paired-t-test-bilateral.png, id=4089, 590.205pt x 465.9006pt>
+<figures/paired-t-test-bilateral.png, id=3979, 590.205pt x 465.9006pt>
 File: figures/paired-t-test-bilateral.png Graphic file (type png)
 <use figures/paired-t-test-bilateral.png>
 Package pdftex.def Info: figures/paired-t-test-bilateral.png  used on input lin
-e 2715.
+e 2817.
 (pdftex.def)             Requested size: 98.335pt x 77.62384pt.
-<figures/paired-t-test-h1-lower.png, id=4090, 590.205pt x 465.9006pt>
+<figures/paired-t-test-h1-lower.png, id=3980, 590.205pt x 465.9006pt>
 File: figures/paired-t-test-h1-lower.png Graphic file (type png)
 <use figures/paired-t-test-h1-lower.png>
 Package pdftex.def Info: figures/paired-t-test-h1-lower.png  used on input line
- 2715.
+ 2817.
 (pdftex.def)             Requested size: 98.335pt x 77.62384pt.
-<figures/paired-t-test-h1-upper.png, id=4091, 590.205pt x 465.9006pt>
+<figures/paired-t-test-h1-upper.png, id=3981, 590.205pt x 465.9006pt>
 File: figures/paired-t-test-h1-upper.png Graphic file (type png)
 <use figures/paired-t-test-h1-upper.png>
 Package pdftex.def Info: figures/paired-t-test-h1-upper.png  used on input line
- 2715.
+ 2817.
 (pdftex.def)             Requested size: 98.335pt x 77.62384pt.
- [128
+ [124
 
  <./figures/paired-t-test-bilateral.png (PNG copy)> <./figures/paired-t-test-h1
--lower.png (PNG copy)> <./figures/paired-t-test-h1-upper.png (PNG copy)>] [129
+-lower.png (PNG copy)> <./figures/paired-t-test-h1-upper.png (PNG copy)>] [125
+
+] [126
+
+] [127
+
+] [128
+
+]
+Overfull \vbox (5.02211pt too high) detected at line 2945
+ []
+
+[129
 
 ] [130
 
@@ -2309,94 +2378,105 @@ Package pdftex.def Info: figures/paired-t-test-h1-upper.png  used on input line
 
 ] [132
 
-]
-Overfull \vbox (5.02211pt too high) detected at line 2843
- []
-
-[133
+] [133
 
 ] [134
 
-] [135
+]
+Overfull \hbox (10.65327pt too wide) detected at line 3075
+[]
+ []
 
-] [136
 
-] [137
+Overfull \hbox (11.86974pt too wide) detected at line 3075
+[]
+ []
 
-] [138
+[135
 
 ]
-Overfull \hbox (10.65327pt too wide) detected at line 2973
+\openout4 = `testeHipoteses.vrb'.
+
+ (./testeHipoteses.vrb) [136
+
+]
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3114.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3114.
+
+[137
+
+]
+\openout4 = `testeHipoteses.vrb'.
+
+ (./testeHipoteses.vrb
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 5.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 5.
+
+
+Overfull \hbox (6.91254pt too wide) detected at line 23
 []
  []
 
+) [138
 
-Overfull \hbox (11.86974pt too wide) detected at line 2973
-[]
- []
+]
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3158.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3158.
 
 [139
 
-] [140
-
 ]
+\openout4 = `testeHipoteses.vrb'.
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3005.
+ (./testeHipoteses.vrb
 
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3005.
-
-[141
-
-]
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3034.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 4.
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3034.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 4.
 
 
-Overfull \hbox (6.91254pt too wide) detected at line 3034
+Overfull \hbox (5.0083pt too wide) detected at line 15
 []
  []
 
-[142
+)
+Overfull \vbox (3.0852pt too high) detected at line 3185
+ []
+
+[140
+
+] [141
+
+] [142
+
+] [143
 
 ]
+\openout4 = `testeHipoteses.vrb'.
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3044.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3044.
-
-[143
-
-]
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3065.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3065.
-
-
-Overfull \hbox (5.0083pt too wide) detected at line 3065
+ (./testeHipoteses.vrb
+Overfull \hbox (12.5594pt too wide) detected at line 21
 []
  []
 
-[144
+) [144
+
+] [145
 
 ]
-<figures/samp-size-paired-t-test-bilateral.png, id=4601, 721.19438pt x 312.4171
-9pt>
-File: figures/samp-size-paired-t-test-bilateral.png Graphic file (type png)
-<use figures/samp-size-paired-t-test-bilateral.png>
-Package pdftex.def Info: figures/samp-size-paired-t-test-bilateral.png  used on
- input line 3079.
-(pdftex.def)             Requested size: 307.28987pt x 133.11638pt.
- [145
+\openout4 = `testeHipoteses.vrb'.
 
- <./figures/samp-size-paired-t-test-bilateral.png (PNG copy)>]
-[146
+ (./testeHipoteses.vrb) [146
 
 ] [147
 
@@ -2404,412 +2484,439 @@ Package pdftex.def Info: figures/samp-size-paired-t-test-bilateral.png  used on
 
 ] [149
 
-] [150
+]
+\openout4 = `testeHipoteses.vrb'.
+
+
+(./testeHipoteses.vrb) [150
 
 ] [151
 
 ]
-<figures/samp-size-paired-t-test-unilateral-h1-upper.png, id=4817, 721.94719pt 
-x 253.69781pt>
-File: figures/samp-size-paired-t-test-unilateral-h1-upper.png Graphic file (typ
-e png)
-<use figures/samp-size-paired-t-test-unilateral-h1-upper.png>
-Package pdftex.def Info: figures/samp-size-paired-t-test-unilateral-h1-upper.pn
-g  used on input line 3209.
-(pdftex.def)             Requested size: 307.28987pt x 107.98466pt.
- [152
+\openout4 = `testeHipoteses.vrb'.
 
- <./figures/samp-size-paired-t-test-unilateral-h1-upper.png (PNG copy)>] [153
+ (./testeHipoteses.vrb) [152
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3465.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mu' on input line 3465.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 3465.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mu' on input line 3465.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 3465.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mu' on input line 3465.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 3465.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3465.
+
+[153
 
 ] [154
 
 ] [155
 
-] [156
+]
 
-] [157
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3545.
 
-] [158
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 3545.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3545.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3545.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 3545.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3545.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3545.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\geq' on input line 3545.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3545.
+
+[156
 
 ]
-<figures/samp-size-paired-t-test-unilateral-h1-lower.png, id=5036, 720.44156pt 
-x 233.37187pt>
-File: figures/samp-size-paired-t-test-unilateral-h1-lower.png Graphic file (typ
-e png)
-<use figures/samp-size-paired-t-test-unilateral-h1-lower.png>
-Package pdftex.def Info: figures/samp-size-paired-t-test-unilateral-h1-lower.pn
-g  used on input line 3352.
-(pdftex.def)             Requested size: 307.28987pt x 99.5396pt.
- [159
+<figures/two-proportion-bilateral.png, id=4991, 590.205pt x 465.9006pt>
+File: figures/two-proportion-bilateral.png Graphic file (type png)
+<use figures/two-proportion-bilateral.png>
+Package pdftex.def Info: figures/two-proportion-bilateral.png  used on input li
+ne 3587.
+(pdftex.def)             Requested size: 98.335pt x 77.62384pt.
+<figures/two-proportion-h1-lower.png, id=4992, 590.205pt x 465.9006pt>
+File: figures/two-proportion-h1-lower.png Graphic file (type png)
+<use figures/two-proportion-h1-lower.png>
+Package pdftex.def Info: figures/two-proportion-h1-lower.png  used on input lin
+e 3587.
+(pdftex.def)             Requested size: 98.335pt x 77.62384pt.
+<figures/two-proportion-h1-upper.png, id=4993, 590.205pt x 465.9006pt>
+File: figures/two-proportion-h1-upper.png Graphic file (type png)
+<use figures/two-proportion-h1-upper.png>
+Package pdftex.def Info: figures/two-proportion-h1-upper.png  used on input lin
+e 3587.
+(pdftex.def)             Requested size: 98.335pt x 77.62384pt.
+ [157
 
- <./figures/samp-size-paired-t-test-unilateral-h1-lower.png (PNG copy)>]
+ <./figures/two-proportion-bilateral.png (PNG copy)> <./figures/two-proportion-
+h1-lower.png (PNG copy)> <./figures/two-proportion-h1-upper.png (PNG copy)>] [1
+58
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3354.
+] [159
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 3354.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 3354.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 3354.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 3354.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 3354.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 3354.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3354.
-
-[160
+] [160
 
 ] [161
 
 ] [162
 
-]
+] [163
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3434.
+] [164
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 3434.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3434.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3434.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 3434.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3434.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3434.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\geq' on input line 3434.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3434.
-
-[163
+] [165
 
 ]
-<figures/two-proportion-bilateral.png, id=5190, 590.205pt x 465.9006pt>
-File: figures/two-proportion-bilateral.png Graphic file (type png)
-<use figures/two-proportion-bilateral.png>
-Package pdftex.def Info: figures/two-proportion-bilateral.png  used on input li
-ne 3476.
-(pdftex.def)             Requested size: 98.335pt x 77.62384pt.
-<figures/two-proportion-h1-lower.png, id=5191, 590.205pt x 465.9006pt>
-File: figures/two-proportion-h1-lower.png Graphic file (type png)
-<use figures/two-proportion-h1-lower.png>
-Package pdftex.def Info: figures/two-proportion-h1-lower.png  used on input lin
-e 3476.
-(pdftex.def)             Requested size: 98.335pt x 77.62384pt.
-<figures/two-proportion-h1-upper.png, id=5192, 590.205pt x 465.9006pt>
-File: figures/two-proportion-h1-upper.png Graphic file (type png)
-<use figures/two-proportion-h1-upper.png>
-Package pdftex.def Info: figures/two-proportion-h1-upper.png  used on input lin
-e 3476.
-(pdftex.def)             Requested size: 98.335pt x 77.62384pt.
- [164
-
- <./figures/two-proportion-bilateral.png (PNG copy)> <./figures/two-proportion-
-h1-lower.png (PNG copy)> <./figures/two-proportion-h1-upper.png (PNG copy)>] [1
-65
-
-] [166
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 3754.
+ [166
 
 ] [167
 
-] [168
+]
+Overfull \hbox (31.19244pt too wide) detected at line 3806
+[]
+ []
+
+[168
 
 ] [169
 
 ] [170
 
-] [171
+]
+Overfull \vbox (2.71153pt too high) detected at line 3872
+ []
+
+[171
 
 ] [172
 
-]
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 3643.
- [173
+] [173
 
 ] [174
 
-]
-Overfull \hbox (31.19244pt too wide) detected at line 3695
-[]
- []
-
-[175
+] [175
 
 ] [176
 
 ] [177
 
-]
-Overfull \vbox (2.71153pt too high) detected at line 3761
- []
-
-[178
+] [178
 
 ] [179
 
-] [180
+]
+Overfull \hbox (7.83852pt too wide) detected at line 4073
+[]
+ []
+
+[180
 
 ] [181
 
 ] [182
 
-] [183
+]
+Overfull \vbox (9.65468pt too high) detected at line 4124
+ []
+
+[183
 
 ] [184
 
-] [185
+]
+Overfull \vbox (33.28702pt too high) detected at line 4159
+ []
 
-] [186
+[185
 
 ]
-Overfull \hbox (7.83852pt too wide) detected at line 3962
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 4161.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 4161.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 4161.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 4161.
+
+
+Overfull \hbox (3.39067pt too wide) detected at line 4187
 []
  []
 
-[187
+[186
 
-] [188
+] [187
+
+]
+Overfull \hbox (41.62271pt too wide) detected at line 4217
+[]
+ []
+
+
+Overfull \vbox (2.66904pt too high) detected at line 4217
+ []
+
+[188
 
 ] [189
 
-]
-Overfull \vbox (9.65468pt too high) detected at line 4013
- []
-
-[190
+] [190
 
 ] [191
 
 ]
-Overfull \vbox (33.28702pt too high) detected at line 4048
- []
+<figures/associacao.png, id=6052, 590.205pt x 465.9006pt>
+File: figures/associacao.png Graphic file (type png)
+<use figures/associacao.png>
+Package pdftex.def Info: figures/associacao.png  used on input line 4296.
+(pdftex.def)             Requested size: 230.46739pt x 181.928pt.
+ [192
 
-[192
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 4050.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 4050.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 4050.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 4050.
-
-
-Overfull \hbox (3.39067pt too wide) detected at line 4076
-[]
- []
-
-[193
-
-] [194
+ <./figures/associacao.png (PNG copy)>] [193
 
 ]
-Overfull \hbox (41.62271pt too wide) detected at line 4106
-[]
+[194
+
+]
+<figures/nao_associacao.png, id=6145, 590.205pt x 465.9006pt>
+File: figures/nao_associacao.png Graphic file (type png)
+<use figures/nao_associacao.png>
+Package pdftex.def Info: figures/nao_associacao.png  used on input line 4349.
+(pdftex.def)             Requested size: 199.16928pt x 157.21689pt.
+ [195
+
+ <./figures/nao_associacao.png (PNG copy)>]
+Overfull \hbox (8.6322pt too wide) in paragraph at lines 4391--4391
+ [][] 
  []
 
-
-Overfull \vbox (2.66904pt too high) detected at line 4106
- []
-
-[195
-
-] [196
+[196
 
 ] [197
 
 ] [198
 
 ]
-<figures/associacao.png, id=6246, 590.205pt x 465.9006pt>
-File: figures/associacao.png Graphic file (type png)
-<use figures/associacao.png>
-Package pdftex.def Info: figures/associacao.png  used on input line 4185.
-(pdftex.def)             Requested size: 230.46739pt x 181.928pt.
+<figures/associacao_moderada.png, id=6266, 590.205pt x 465.9006pt>
+File: figures/associacao_moderada.png Graphic file (type png)
+<use figures/associacao_moderada.png>
+Package pdftex.def Info: figures/associacao_moderada.png  used on input line 44
+36.
+(pdftex.def)             Requested size: 184.3758pt x 145.54381pt.
  [199
 
- <./figures/associacao.png (PNG copy)>] [200
+ <./figures/associacao_moderada.png (PNG copy)>] [200
 
 ]
 [201
 
-]
-<figures/nao_associacao.png, id=6338, 590.205pt x 465.9006pt>
-File: figures/nao_associacao.png Graphic file (type png)
-<use figures/nao_associacao.png>
-Package pdftex.def Info: figures/nao_associacao.png  used on input line 4238.
-(pdftex.def)             Requested size: 199.16928pt x 157.21689pt.
- [202
+] [202
 
- <./figures/nao_associacao.png (PNG copy)>]
-Overfull \hbox (8.6322pt too wide) in paragraph at lines 4280--4280
- [][] 
- []
-
-[203
+] [203
 
 ] [204
 
 ] [205
 
-]
-<figures/associacao_moderada.png, id=6460, 590.205pt x 465.9006pt>
-File: figures/associacao_moderada.png Graphic file (type png)
-<use figures/associacao_moderada.png>
-Package pdftex.def Info: figures/associacao_moderada.png  used on input line 43
-25.
-(pdftex.def)             Requested size: 184.3758pt x 145.54381pt.
- [206
+] [206
 
- <./figures/associacao_moderada.png (PNG copy)>] [207
+] [207
 
-]
-[208
+] [208
 
 ] [209
 
 ] [210
 
-] [211
+]
+\openout4 = `testeHipoteses.vrb'.
+
+
+(./testeHipoteses.vrb) [211
 
 ] [212
 
-] [213
+]
+\openout4 = `testeHipoteses.vrb'.
 
-] [214
-
-] [215
-
-] [216
-
-] [217
-
-] [218
-
-] [219
+ (./testeHipoteses.vrb) [213
 
 ]
-Overfull \vbox (2.08789pt too high) detected at line 4677
+Overfull \vbox (8.94016pt too high) detected at line 4850
  []
+
+[214
+
+]
+<figures/positiva.png, id=6739, 572.1375pt x 416.2752pt>
+File: figures/positiva.png Graphic file (type png)
+<use figures/positiva.png>
+Package pdftex.def Info: figures/positiva.png  used on input line 4864.
+(pdftex.def)             Requested size: 215.10196pt x 156.50298pt.
+ [215
+
+ <./figures/positiva.png (PNG copy)>]
+Overfull \vbox (13.16054pt too high) detected at line 4901
+ []
+
+[216
+
+]
+<figures/negativa.png, id=6800, 1011.78pt x 416.2752pt>
+File: figures/negativa.png Graphic file (type png)
+<use figures/negativa.png>
+Package pdftex.def Info: figures/negativa.png  used on input line 4914.
+(pdftex.def)             Requested size: 322.65529pt x 132.7471pt.
+
+Overfull \hbox (15.36542pt too wide) in paragraph at lines 4914--4914
+ [] 
+ []
+
+[217
+
+ <./figures/negativa.png (PNG copy)>] [218
+
+]
+<figures/nula.png, id=6860, 867.24pt x 416.2752pt>
+File: figures/nula.png Graphic file (type png)
+<use figures/nula.png>
+Package pdftex.def Info: figures/nula.png  used on input line 4961.
+(pdftex.def)             Requested size: 307.28987pt x 147.49606pt.
+ [219
+
+ <./figures/nula.png>]
+<figures/a_positiva.png, id=6890, 505.89pt x 505.89pt>
+File: figures/a_positiva.png Graphic file (type png)
+<use figures/a_positiva.png>
+Package pdftex.def Info: figures/a_positiva.png  used on input line 5012.
+(pdftex.def)             Requested size: 42.67912pt x 42.672pt.
+<figures/a_negativa.png, id=6891, 505.89pt x 505.89pt>
+File: figures/a_negativa.png Graphic file (type png)
+<use figures/a_negativa.png>
+Package pdftex.def Info: figures/a_negativa.png  used on input line 5012.
+(pdftex.def)             Requested size: 42.67912pt x 42.672pt.
+<figures/a_nula.png, id=6892, 505.89pt x 505.89pt>
+File: figures/a_nula.png Graphic file (type png)
+<use figures/a_nula.png>
+Package pdftex.def Info: figures/a_nula.png  used on input line 5012.
+(pdftex.def)             Requested size: 42.67912pt x 42.672pt.
 
 [220
 
-]
-Overfull \vbox (8.94016pt too high) detected at line 4727
- []
-
+ <./figures/a_positiva.png> <./figures/a_negativa.png> <./figures/a_nula.png>] 
 [221
 
-]
-<figures/positiva.png, id=6923, 572.1375pt x 416.2752pt>
-File: figures/positiva.png Graphic file (type png)
-<use figures/positiva.png>
-Package pdftex.def Info: figures/positiva.png  used on input line 4741.
-(pdftex.def)             Requested size: 215.10196pt x 156.50298pt.
- [222
+] [222
 
- <./figures/positiva.png (PNG copy)>]
-Overfull \vbox (13.16054pt too high) detected at line 4778
+]
+Overfull \vbox (3.9383pt too high) detected at line 5116
  []
 
 [223
 
-]
-<figures/negativa.png, id=6984, 1011.78pt x 416.2752pt>
-File: figures/negativa.png Graphic file (type png)
-<use figures/negativa.png>
-Package pdftex.def Info: figures/negativa.png  used on input line 4791.
-(pdftex.def)             Requested size: 322.65529pt x 132.7471pt.
+] [224
 
-Overfull \hbox (15.36542pt too wide) in paragraph at lines 4791--4791
- [] 
+]
+<figures/exemplo2.png, id=7055, 505.89pt x 505.89pt>
+File: figures/exemplo2.png Graphic file (type png)
+<use figures/exemplo2.png>
+Package pdftex.def Info: figures/exemplo2.png  used on input line 5165.
+(pdftex.def)             Requested size: 92.18555pt x 92.18327pt.
+
+Overfull \hbox (56.46019pt too wide) detected at line 5165
+[]
  []
 
-[224
+[225
 
- <./figures/negativa.png (PNG copy)>] [225
+ <./figures/exemplo2.png>] [226
 
 ]
-<figures/nula.png, id=7044, 867.24pt x 416.2752pt>
-File: figures/nula.png Graphic file (type png)
-<use figures/nula.png>
-Package pdftex.def Info: figures/nula.png  used on input line 4838.
-(pdftex.def)             Requested size: 307.28987pt x 147.49606pt.
- [226
+<figures/z-fisher-cor-bilateral.png, id=7117, 590.205pt x 465.9006pt>
+File: figures/z-fisher-cor-bilateral.png Graphic file (type png)
+<use figures/z-fisher-cor-bilateral.png>
+Package pdftex.def Info: figures/z-fisher-cor-bilateral.png  used on input line
+ 5207.
+(pdftex.def)             Requested size: 98.335pt x 77.62384pt.
+<figures/z-fisher-cor-h1-lower.png, id=7118, 590.205pt x 465.9006pt>
+File: figures/z-fisher-cor-h1-lower.png Graphic file (type png)
+<use figures/z-fisher-cor-h1-lower.png>
+Package pdftex.def Info: figures/z-fisher-cor-h1-lower.png  used on input line 
+5207.
+(pdftex.def)             Requested size: 98.335pt x 77.62384pt.
+<figures/z-fisher-cor-h1-upper.png, id=7119, 590.205pt x 465.9006pt>
+File: figures/z-fisher-cor-h1-upper.png Graphic file (type png)
+<use figures/z-fisher-cor-h1-upper.png>
+Package pdftex.def Info: figures/z-fisher-cor-h1-upper.png  used on input line 
+5207.
+(pdftex.def)             Requested size: 98.335pt x 77.62384pt.
+ [227
 
- <./figures/nula.png>]
-<figures/a_positiva.png, id=7074, 505.89pt x 505.89pt>
-File: figures/a_positiva.png Graphic file (type png)
-<use figures/a_positiva.png>
-Package pdftex.def Info: figures/a_positiva.png  used on input line 4889.
-(pdftex.def)             Requested size: 42.67912pt x 42.672pt.
-<figures/a_negativa.png, id=7075, 505.89pt x 505.89pt>
-File: figures/a_negativa.png Graphic file (type png)
-<use figures/a_negativa.png>
-Package pdftex.def Info: figures/a_negativa.png  used on input line 4889.
-(pdftex.def)             Requested size: 42.67912pt x 42.672pt.
-<figures/a_nula.png, id=7076, 505.89pt x 505.89pt>
-File: figures/a_nula.png Graphic file (type png)
-<use figures/a_nula.png>
-Package pdftex.def Info: figures/a_nula.png  used on input line 4889.
-(pdftex.def)             Requested size: 42.67912pt x 42.672pt.
-
-[227
-
- <./figures/a_positiva.png> <./figures/a_negativa.png> <./figures/a_nula.png>] 
-[228
+ <./figures/z-fisher-cor-bilateral.png (PNG copy)> <./figures/z-fisher-cor-h1-l
+ower.png (PNG copy)> <./figures/z-fisher-cor-h1-upper.png (PNG copy)>] [228
 
 ] [229
 
 ]
-Overfull \vbox (3.9383pt too high) detected at line 4993
+Overfull \vbox (0.50072pt too high) detected at line 5267
  []
 
 [230
@@ -2817,63 +2924,38 @@ Overfull \vbox (3.9383pt too high) detected at line 4993
 ] [231
 
 ]
-<figures/exemplo2.png, id=7238, 505.89pt x 505.89pt>
-File: figures/exemplo2.png Graphic file (type png)
-<use figures/exemplo2.png>
-Package pdftex.def Info: figures/exemplo2.png  used on input line 5042.
-(pdftex.def)             Requested size: 92.18555pt x 92.18327pt.
-
-Overfull \hbox (56.46019pt too wide) detected at line 5042
-[]
+Overfull \vbox (15.3324pt too high) detected at line 5322
  []
 
 [232
 
- <./figures/exemplo2.png>] [233
+] [233
 
-]
-<figures/z-fisher-cor-bilateral.png, id=7301, 590.205pt x 465.9006pt>
-File: figures/z-fisher-cor-bilateral.png Graphic file (type png)
-<use figures/z-fisher-cor-bilateral.png>
-Package pdftex.def Info: figures/z-fisher-cor-bilateral.png  used on input line
- 5084.
-(pdftex.def)             Requested size: 98.335pt x 77.62384pt.
-<figures/z-fisher-cor-h1-lower.png, id=7302, 590.205pt x 465.9006pt>
-File: figures/z-fisher-cor-h1-lower.png Graphic file (type png)
-<use figures/z-fisher-cor-h1-lower.png>
-Package pdftex.def Info: figures/z-fisher-cor-h1-lower.png  used on input line 
-5084.
-(pdftex.def)             Requested size: 98.335pt x 77.62384pt.
-<figures/z-fisher-cor-h1-upper.png, id=7303, 590.205pt x 465.9006pt>
-File: figures/z-fisher-cor-h1-upper.png Graphic file (type png)
-<use figures/z-fisher-cor-h1-upper.png>
-Package pdftex.def Info: figures/z-fisher-cor-h1-upper.png  used on input line 
-5084.
-(pdftex.def)             Requested size: 98.335pt x 77.62384pt.
- [234
+] [234
 
- <./figures/z-fisher-cor-bilateral.png (PNG copy)> <./figures/z-fisher-cor-h1-l
-ower.png (PNG copy)> <./figures/z-fisher-cor-h1-upper.png (PNG copy)>] [235
+] [235
 
 ] [236
 
-]
-Overfull \vbox (0.50072pt too high) detected at line 5144
- []
-
-[237
-
-] [238
+] [237
 
 ]
-Overfull \vbox (15.3324pt too high) detected at line 5199
+Overfull \hbox (13.45139pt too wide) detected at line 5454
+[]
  []
 
-[239
+[238
+
+] [239
 
 ] [240
 
-] [241
+]
+Overfull \hbox (37.07307pt too wide) detected at line 5509
+[]
+ []
+
+[241
 
 ] [242
 
@@ -2881,25 +2963,20 @@ Overfull \vbox (15.3324pt too high) detected at line 5199
 
 ] [244
 
-]
-Overfull \hbox (13.45139pt too wide) detected at line 5331
-[]
- []
-
-[245
+] [245
 
 ] [246
 
 ] [247
 
+] [248
+
 ]
-Overfull \hbox (37.07307pt too wide) detected at line 5386
+Overfull \hbox (7.00893pt too wide) detected at line 5674
 []
  []
 
-[248
-
-] [249
+[249
 
 ] [250
 
@@ -2911,64 +2988,45 @@ Overfull \hbox (37.07307pt too wide) detected at line 5386
 
 ] [254
 
-] [255
+]
+Overfull \hbox (25.21681pt too wide) detected at line 5815
+[]
+ []
+
+
+Overfull \vbox (5.80467pt too high) detected at line 5815
+ []
+
+[255
 
 ]
-Overfull \hbox (7.00893pt too wide) detected at line 5551
-[]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 5817.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\rho' on input line 5817.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 5817.
+
+
+Overfull \hbox (17.78607pt too wide) detected at line 5840
+\OT1/phv/m/sl/9 IC\OT1/cmss/m/n/9 (\OML/cmm/m/it/9 ^^Z\OT1/cmss/m/n/9 ; \OML/cm
+m/m/it/9 ^^M\OT1/cmss/m/n/9 ) = [] \OML/cmm/m/it/9 :
  []
 
 [256
 
 ] [257
 
-] [258
-
-] [259
-
-] [260
-
-] [261
-
 ]
-Overfull \hbox (25.21681pt too wide) detected at line 5692
-[]
+Overfull \vbox (2.44943pt too high) detected at line 5872
  []
 
-
-Overfull \vbox (5.80467pt too high) detected at line 5692
- []
-
-[262
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5694.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\rho' on input line 5694.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5694.
-
-
-Overfull \hbox (17.78607pt too wide) detected at line 5717
-\OT1/phv/m/sl/9 IC\OT1/cmss/m/n/9 (\OML/cmm/m/it/9 ^^Z\OT1/cmss/m/n/9 ; \OML/cm
-m/m/it/9 ^^M\OT1/cmss/m/n/9 ) = [] \OML/cmm/m/it/9 :
- []
-
-[263
-
-] [264
-
-]
-Overfull \vbox (2.44943pt too high) detected at line 5749
- []
-
-[265
+[258
 
 ]
 \tf@nav=\write6
@@ -2980,23 +3038,23 @@ Overfull \vbox (2.44943pt too high) detected at line 5749
 \tf@snm=\write8
 \openout8 = `testeHipoteses.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5751.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5751.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5874.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5874.
  (./testeHipoteses.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5751.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5751.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5874.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5874.
 
 Package rerunfilecheck Info: File `testeHipoteses.out' has not changed.
-(rerunfilecheck)             Checksum: AB80383C3FAD37E252DC4E11042FC32D;2572.
+(rerunfilecheck)             Checksum: FC317FAAFA1A9A2B4BB1914E088CD247;2651.
  ) 
 Here is how much of TeX's memory you used:
- 38216 strings out of 492609
- 753687 string characters out of 6131463
- 869340 words of memory out of 5000000
- 40814 multiletter control sequences out of 15000+600000
- 587516 words of font info for 132 fonts, out of 8000000 for 9000
+ 39968 strings out of 492609
+ 776197 string characters out of 6131463
+ 1095922 words of memory out of 5000000
+ 42505 multiletter control sequences out of 15000+600000
+ 589797 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,19n,74p,940b,999s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,19n,74p,940b,1304s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-
@@ -3025,10 +3083,10 @@ mbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on testeHipoteses.pdf (265 pages, 5812836 bytes).
+Output written on testeHipoteses.pdf (258 pages, 5552798 bytes).
 PDF statistics:
- 8524 PDF objects out of 8907 (max. 8388607)
- 7637 compressed objects within 77 object streams
- 630 named destinations out of 1000 (max. 500000)
- 467 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 8339 PDF objects out of 8907 (max. 8388607)
+ 7475 compressed objects within 75 object streams
+ 626 named destinations out of 1000 (max. 500000)
+ 440 words of extra memory for PDF output out of 10000 (max. 10000000)
 
